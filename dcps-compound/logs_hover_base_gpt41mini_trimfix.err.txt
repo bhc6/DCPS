@@ -1,0 +1,35 @@
+[92m07:58:23 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032). Falling back to local backup.
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: bhc6 (awesome-prompt) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 8w1agenb
+wandb: Tracking run with wandb version 0.24.0
+wandb: Run data is saved locally in C:\Users\123\Desktop\gepa\wandb\run-20260504_075830-8w1agenb
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run original_dspy_baseline_gpt41mini
+wandb:  View project at https://wandb.ai/awesome-prompt/hover-baseline-test
+wandb:  View run at https://wandb.ai/awesome-prompt/hover-baseline-test/runs/8w1agenb
+wandb: Detected [dspy, litellm, openai] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai/
+2026/05/04 08:04:13 ERROR dspy.utils.parallelizer: Error for Example({'claim': 'John Michael "Ozzy" Osbourne has released more solo albums than the member of Tears For Fears who sang on Change (Tears for Fears Song).', 'supporting_facts': [{'key': 'Ozzy Osbourne', 'value': 0}, {'key': 'Ozzy Osbourne', 'value': 2}, {'key': 'Curt Smith', 'value': 2}, {'key': 'Change (Tears for Fears song)', 'value': 1}], 'label': 'SUPPORTED'}) (input_keys={'claim'}): The LM returned an empty or null response.
+
+Adapter ChatAdapter failed to parse the LM response. 
+
+LM Response: None 
+
+Expected to find output fields in the LM response: [reasoning, summary] 
+
+. Set `provide_traceback=True` for traceback.
+2026/05/04 08:04:40 INFO dspy.evaluate.evaluate: Average Metric: 121.0 / 300 (40.3%)
+wandb: updating run metadata
+wandb: uploading history steps 0-0, summary, console lines 5-5; uploading output.log; uploading wandb-summary.json
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading console lines 15-17
+wandb: 
+wandb: Run summary:
+wandb: test_score 0.4033
+wandb: 
+wandb:  View run original_dspy_baseline_gpt41mini at: https://wandb.ai/awesome-prompt/hover-baseline-test/runs/8w1agenb
+wandb:  View project at: https://wandb.ai/awesome-prompt/hover-baseline-test
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20260504_075830-8w1agenb\logs

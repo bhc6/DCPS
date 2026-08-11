@@ -1,0 +1,8 @@
+subset,metric,PPO_mean,RAE_mean,RAE_std,GFLOWPO_mean,GFLOWPO_std
+Dyck Languages,Exact Match,0.00,0.00,0.00,0.00,0.00
+Gender Inclusive Sentences (German),Exact Match,90.39,87.42,2.54,90.44,0.68
+Object Counting,Exact Match,32.86,34.69,0.88,38.18,2.78
+Operators,Exact Match,57.15,50.46,1.72,53.52,4.01
+Tense,Exact Match,99.22,95.91,1.53,96.28,0.71
+Word Sorting,Exact Match,98.21,95.50,2.45,95.55,3.56
+Average,Exact Match,62.97,60.66,,62.33,

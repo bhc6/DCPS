@@ -1,0 +1,1 @@
+{"summary": true, "opt": "DCPS", "bench": "LiveBenchMathBench", "prog": "CoT", "model": "gpt-41-mini", "test_score_pct": 59.52, "val_best_pct": 63.3, "best_iteration": null, "n_test": 126}

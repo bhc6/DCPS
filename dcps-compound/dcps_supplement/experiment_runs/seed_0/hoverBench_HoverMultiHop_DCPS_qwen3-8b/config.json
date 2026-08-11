@@ -1,0 +1,25 @@
+{
+  "benchmark_name": "hoverBench",
+  "program_name": "HoverMultiHop",
+  "optimizer_name": "DCPS",
+  "optimizer_description": "Demonstration-Conditioned Prompt Search (top-1 by validation, fair held-out test).",
+  "lm_name": "qwen3-8b",
+  "lm_config": {
+    "model": "openrouter/qwen/qwen3-8b",
+    "api_base": "https://openrouter.ai/api/v1",
+    "api_key": "<REDACTED>",
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_tokens": 8192
+  },
+  "num_iterations": 228,
+  "num_fewshot": 3,
+  "top_k_prompts": 1,
+  "best_iteration": null,
+  "val_best_score_pct": 60.0,
+  "test_score_pct": 56.67,
+  "n_test_examples": 300,
+  "num_threads": 16,
+  "source": "paper Table 2(b); extended HoVer run"
+}

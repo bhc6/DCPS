@@ -1,0 +1,30 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: bhc6 (awesome-prompt) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run mo8q5f7s
+wandb: Tracking run with wandb version 0.24.0
+wandb: Run data is saved locally in C:\Users\123\Desktop\gepa\wandb\run-20260504_185529-mo8q5f7s
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run original_dspy_baseline_qwen3-8b
+wandb:  View project at https://wandb.ai/awesome-prompt/hover-baseline-test
+wandb:  View run at https://wandb.ai/awesome-prompt/hover-baseline-test/runs/mo8q5f7s
+wandb: Detected [dspy, litellm, openai] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai/
+2026/05/04 19:01:16 ERROR dspy.utils.parallelizer: Error for Example({'claim': 'A group formed by JYP Entertainment and debuted as a part of a seven member group whose first EP peak at number one on the "Billboard" World Albums Chart. This group produced the record "Verse 2".', 'supporting_facts': [{'key': 'JJ Project', 'value': 0}, {'key': 'JJ Project', 'value': 1}, {'key': 'Got7', 'value': 0}, {'key': 'Got7', 'value': 1}, {'key': 'Got7', 'value': 2}, {'key': 'Got7', 'value': 3}, {'key': 'Verse 2', 'value': 0}], 'label': 'SUPPORTED'}) (input_keys={'claim'}): litellm.APIError: APIError: OpenrouterException - Provider returned error. Set `provide_traceback=True` for traceback.
+2026/05/04 19:02:54 ERROR dspy.utils.parallelizer: Error for Example({'claim': 'The three best sellers from the author of Detective (novel) that were released before Donna Tartt was born are "Hotel"and "Airport", from the 1960\'s, and "Wheels" from the 1970\'s.', 'supporting_facts': [{'key': 'Arthur Hailey', 'value': 1}, {'key': 'Donna Tartt', 'value': 0}, {'key': 'Detective (novel)', 'value': 0}], 'label': 'SUPPORTED'}) (input_keys={'claim'}): litellm.APIError: APIError: OpenrouterException - Provider returned error. Set `provide_traceback=True` for traceback.
+2026/05/04 19:02:59 ERROR dspy.utils.parallelizer: Error for Example({'claim': 'The relative of Prince Georgy Konstantinovich of Russia was the grandson of Emperor Nicholas 1 who was the father of Princh John Konstantinovich of Russia.', 'supporting_facts': [{'key': 'Prince John Konstantinovich of Russia', 'value': 0}, {'key': 'Grand Duke Konstantin Konstantinovich of Russia', 'value': 0}, {'key': 'Prince Georgy Konstantinovich of Russia', 'value': 0}], 'label': 'SUPPORTED'}) (input_keys={'claim'}): litellm.APIError: APIError: OpenrouterException - Provider returned error. Set `provide_traceback=True` for traceback.
+2026/05/04 19:07:22 ERROR dspy.utils.parallelizer: Error for Example({'claim': 'The British fashion and lifestyle publication, for whom Rachel Egglestone-Evans works at, and InStyle are not both US-based magazines.', 'supporting_facts': [{'key': 'Vintage Life', 'value': 0}, {'key': 'InStyle', 'value': 0}, {'key': 'Rachel Egglestone-Evans', 'value': 0}], 'label': 'SUPPORTED'}) (input_keys={'claim'}): litellm.APIError: APIError: OpenrouterException - Provider returned error. Set `provide_traceback=True` for traceback.
+2026/05/04 19:09:18 ERROR dspy.utils.parallelizer: Error for Example({'claim': 'The author of The Sirens Sang of Murder, who comes from Sao Paulo, is not the best known of modern Brazilian writers. Jorge Leal Amado de Faria is.', 'supporting_facts': [{'key': 'Jorge Amado', 'value': 0}, {'key': 'Jorge Amado', 'value': 1}, {'key': 'Sarah Caudwell', 'value': 0}, {'key': 'The Sirens Sang of Murder', 'value': 0}], 'label': 'NOT_SUPPORTED'}) (input_keys={'claim'}): litellm.APIError: APIError: OpenrouterException - Provider returned error. Set `provide_traceback=True` for traceback.
+2026/05/04 19:09:31 INFO dspy.evaluate.evaluate: Average Metric: 101.0 / 300 (33.7%)
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading history steps 0-0, summary, console lines 5-5
+wandb: 
+wandb: Run summary:
+wandb: test_score 0.3367
+wandb: 
+wandb:  View run original_dspy_baseline_qwen3-8b at: https://wandb.ai/awesome-prompt/hover-baseline-test/runs/mo8q5f7s
+wandb:  View project at: https://wandb.ai/awesome-prompt/hover-baseline-test
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20260504_185529-mo8q5f7s\logs

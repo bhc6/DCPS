@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\caption{Phase-1 estimated GPU rental cost comparison. Because StablePrompt-PPO runs on A100 and StablePrompt-RAE runs on A40, raw wall-clock times are not directly comparable. We convert runtime to estimated USD using representative cloud rental rates (A100 80GB $\approx$ \$1.50/hr, A40 48GB $\approx$ \$0.40/hr; mid-range of specialized cloud providers as of May 2026). This normalization reveals that RAE is consistently cheaper per family sweep, and significantly so on the tasks where accuracy is statistically indistinguishable (GLUE, BBII-MC). Rows sharing the same task family and epoch count are directly comparable.}
+\label{tab:app_phase1_gpu_cost}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}llccrrcrr@{}}
+\toprule
+\textbf{Method} & \textbf{Task Family} & \textbf{GPU} & \textbf{Epochs} & \textbf{Runtime (h)} & \textbf{Rate (\$/hr)} & \textbf{Est.\ Cost (\$)} & \textbf{$\Delta$Acc (pp)} & \textbf{Accuracy verdict} \\ \midrule
+StablePrompt-PPO & GLUE/SuperGLUE & A100 & 100 & 3.97 & 1.50 & 5.96 & \multirow{2}{*}{$-0.4$} & \multirow{2}{*}{Tied ($p{>}0.05$)} \\
+StablePrompt-RAE & GLUE/SuperGLUE & A40 & 100 & 4.83 & 0.40 & \textbf{1.93} & & \\ \addlinespace
+StablePrompt-PPO & BBII-MC & A100 & 30 & 3.17 & 1.50 & 4.76 & \multirow{2}{*}{$+0.4$} & \multirow{2}{*}{Tied ($p{>}0.05$)} \\
+StablePrompt-RAE & BBII-MC & A40 & 30 & 3.38 & 0.40 & \textbf{1.35} & & \\ \addlinespace
+StablePrompt-PPO & BBII-Gen & A100 & 30 & 1.84 & 1.50 & 2.76 & \multirow{2}{*}{$+2.3$} & \multirow{2}{*}{PPO slight edge} \\
+StablePrompt-RAE & BBII-Gen & A40 & 30 & 2.66 & 0.40 & \textbf{1.06} & & \\ \addlinespace
+StablePrompt-PPO & II & A100 & 30 & 6.65 & 1.50 & 9.98 & \multirow{2}{*}{$+4.4$} & \multirow{2}{*}{PPO leads at 30 ep} \\
+StablePrompt-RAE & II & A40 & 30 & 2.76 & 0.40 & \textbf{1.10} & & \\ \addlinespace
+StablePrompt-RAE & II & A40 & 100 & 14.74 & 0.40 & 5.90 & $+0.1$ & Gap closes \\
+StablePrompt-RAE & II & A40 & 200 & 28.93 & 0.40 & 11.57 & $-0.4$ & RAE overtakes \\ \addlinespace
+StablePrompt-PPO & MMLU & A100 & 30 & 6.38 & 1.50 & 9.57 & \multirow{2}{*}{$+1.8$} & \multirow{2}{*}{PPO moderate edge} \\
+StablePrompt-RAE & MMLU & A40 & 30 & 6.58 & 0.40 & \textbf{2.63} & & \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

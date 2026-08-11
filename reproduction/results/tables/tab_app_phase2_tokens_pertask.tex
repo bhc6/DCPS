@@ -1,0 +1,36 @@
+\begin{table}[htbp]
+\centering
+\caption{Phase-2 \textbf{optimizer-phase only} per-task token consumption and API cost for the methods that emit \texttt{summary\_optimizer/*}. Columns are taken directly from the WandB summary fields \texttt{summary\_optimizer/input\_tokens}, \texttt{summary\_optimizer/output\_tokens}, and \texttt{summary\_optimizer/cost} (USD), restricted to rows whose optimizer-phase fields are non-zero. The companion test-phase fields \texttt{summary\_test/*} are not added here; they account for only $\sim 3$--$7\%$ of the optimizer-phase cost on every cell where both are logged. ``$n_{\text{tok}}$ / $n$'' is the number of WandB runs that actually exposed \texttt{summary\_optimizer/*} versus the total number of runs we recorded for that (model, task, method). DCPS-Compound rows are omitted from this table because the DCPS-Compound DSPy harness does not write \texttt{summary\_optimizer/*}; the only directly observable DCPS-Compound total is the DSPy cumulative tracker on GPT-4.1-mini~$\times$~PUPA ($6.33$M input $+$ $2.02$M output $=$ $8.34$M, corrected to $7.72$M after stripping the $\sim 8\%$ test-phase share), which we use to calibrate the GEPA-family per-cell mean as the DCPS-Compound proxy in Tables~\ref{tab:rcei}--\ref{tab:app_rcei_pertask}. Qwen3-8B rows for HotpotQA, IFBench, Hover, and PUPA are also omitted because no GEPA-family or MIPROv2-Heavy runs were present in our WandB log on those cells (the corresponding scores in Table~\ref{tab:qwen_results} are sourced from the original GEPA artifact). Qwen3-8B was served on a free-tier OpenRouter endpoint at audit time, so \texttt{summary\_optimizer/cost} reads \$0 for AIME-2025 ($\dagger$) and \$$2$ for LiveBench-Math; reviewers reproducing on a paid endpoint should re-price using the input/output columns.}
+\label{tab:app_phase2_tokens_pertask}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+\textbf{Task} & \textbf{Method} & \textbf{$n_{\text{tok}}$ / $n$} & \textbf{Input (M)} & \textbf{Output (M)} & \textbf{Est. Cost (USD)} \\ \midrule
+\multicolumn{6}{@{}l}{\textit{Agent model: GPT-4.1-mini}} \\ \midrule
+\multirow{3}{*}{IFBench}
+ & MIPROv2-Heavy & 1 / 1 & 8.88  & 2.50 & \$7.66   \\
+ & GEPA-MERGE    & 1 / 2 & 4.10  & 1.89 & \$7.30   \\
+ & GEPA          & 1 / 2 & 4.99  & 2.19 & \$6.87   \\ \cmidrule(l){1-6}
+\multirow{3}{*}{Hover}
+ & MIPROv2-Heavy & 1 / 1 & 19.75 & 2.71 & \$24.50  \\
+ & GEPA-MERGE    & 2 / 4 & 19.67 & 4.14 & \$23.22  \\
+ & GEPA          & 2 / 4 & 21.85 & 4.86 & \$24.24  \\ \cmidrule(l){1-6}
+\multirow{3}{*}{PUPA}
+ & MIPROv2-Heavy & 1 / 1 & 7.72  & 1.38 & \$5.41   \\
+ & GEPA-MERGE    & 1 / 2 & 5.66  & 1.81 & \$6.58   \\
+ & GEPA          & 1 / 2 & 6.19  & 1.99 & \$6.84   \\ \cmidrule(l){1-6}
+\multirow{3}{*}{AIME-2025}
+ & MIPROv2-Heavy & 3 / 3 & 6.06  & 3.88 & \$10.86  \\
+ & GEPA-MERGE    & 2 / 4 & 4.38  & 9.08 & \$17.36  \\
+ & GEPA          & 1 / 2 & 4.85  & 9.47 & \$18.23  \\ \cmidrule(l){1-6}
+\multirow{2}{*}{LiveBench-Math}
+ & GEPA-MERGE    & 1 / 2 & 2.60  & 2.60 & \$5.50   \\
+ & GEPA          & 1 / 2 & 2.65  & 2.81 & \$9.97   \\ \midrule
+\multicolumn{6}{@{}l}{\textit{Agent model: Qwen3-8B (free-tier OpenRouter at audit time, see caption)}} \\ \midrule
+AIME-2025      & MIPROv2-Heavy & 1 / 1 & 2.22  & 16.73 & \$0.00$^\dagger$ \\ \cmidrule(l){1-6}
+\multirow{3}{*}{LiveBench-Math}
+ & MIPROv2-Heavy & 2 / 2 & 4.79  & 6.84  & \$2.25  \\
+ & GEPA-MERGE    & 2 / 4 & 2.16  & 9.63  & \$2.25  \\
+ & GEPA          & 2 / 4 & 2.75  & 9.37  & \$2.14  \\
+\bottomrule
+\end{tabular}
+\end{table}

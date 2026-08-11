@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\caption{Phase-1 GPU runtime by Main Results task-family granularity. StablePrompt-RAE rows preserve the original rule that GFB is always RAE and AlgPrompt without PPO is RAE; supplemental StablePrompt-PPO A100 rows are reported separately in Table~\ref{tab:app_phase1_ppo_runtime}. Parallel repeated runs are not summed: runtime is first averaged within each subset, then summed across subsets to estimate one family sweep; for MMLU the subsets are subjects. Because the two methods use different GPU classes, these rows are hardware-qualified runtime audits rather than a same-hardware speed comparison. Phase~1 has no API token or USD cost.}
+\label{tab:app_phase1_runtime}
+\begin{tabular}{@{}llccrr@{}}
+\toprule
+\textbf{Method} & \textbf{Task Family} & \textbf{GPU} & \textbf{Epochs} & \textbf{Family sweep (h)} & \textbf{Mean min/subset} \\ \midrule
+StablePrompt-RAE & GLUE/SuperGLUE & A40 & 100 & 4.83 & 48.32 \\
+StablePrompt-RAE & BBII-MC & A40 & 30 & 3.38 & 15.61 \\
+StablePrompt-RAE & BBII-Gen & A40 & 30 & 2.66 & 26.55 \\
+StablePrompt-RAE & II & A40 & 30 & 2.76 & 6.89 \\
+StablePrompt-RAE & II & A40 & 100 & 14.74 & 36.86 \\
+StablePrompt-RAE & II & A40 & 200 & 28.93 & 72.32 \\
+StablePrompt-RAE & MMLU & A40 & 30 & 6.58 & 6.81 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,11 @@
+method,SST-2,MRPC,RTE,QNLI,MNLI,SNLI,Average
+Fine-Tuning,71.9,59.6,55.7,63.1,41.1,64.8,59.3
+Manual prompt,89.1,51.0,64.0,73.0,67.0,47.0,65.2
+APE,83.2,55.3,78.6,75.0,54.6,72.3,70.1
+ProTeGi,69.2,48.8,73.2,74.2,56.6,61.3,64.0
+StablePrompt-PPO mean,92.4,71.0,79.4,77.1,62.6,77.6,76.7
+StablePrompt-PPO std,1.1,3.6,,,,0.1,1.6,
+StablePrompt-RAE mean,91.2,74.1,81.6,78.9,64.0,72.8,77.1
+StablePrompt-RAE std,2.8,1.8,1.0,1.3,2.9,1.3,1.2
+GFLOWPO mean,93.0,69.6,82.0,80.2,68.7,78.6,78.7
+GFLOWPO std,0.6,4.2,2.5,3.4,3.2,2.7,

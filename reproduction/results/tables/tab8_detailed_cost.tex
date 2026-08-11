@@ -1,0 +1,119 @@
+\begin{table}[ht]
+\centering
+\caption{Detailed Cost Metrics across All Experiments.}
+\label{tab:detailed_cost}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}lllcccc@{}}
+\toprule
+\textbf{Model} & \textbf{Dataset} & \textbf{Method} & \textbf{Rollouts} & \textbf{Input Tokens} & \textbf{Output Tokens} & \textbf{Est. Cost (USD)} \\ \midrule
+GPT-4.1-mini & AIME-2025 & Baseline & -- & 5,848 & 85,752 & $0.0523 \\
+ & AIME-2025 & DCPS-Compound & 320 & -- & -- & -- \\
+ & AIME-2025 & GEPA & 2,000 & 4,900,408 & 9,591,800 & $6.4901 \\
+ & AIME-2025 & GEPA-MERGE & -- & 4,421,762 & 9,220,144 & $6.1954 \\
+ & AIME-2025 & MIPROv2-Heavy & -- & 6,405,702 & 4,502,816 & $3.6625 \\
+ & HOTPOTQA & Baseline & -- & 771,330 & 161,929 & $0.2129 \\
+ & HOTPOTQA & DCPS-Compound & 320 & -- & -- & -- \\
+ & HOTPOTQA & GEPA & 2,000 & 22,910,954 & 3,533,860 & $5.5569 \\
+ & HOTPOTQA & GEPA-MERGE & -- & 15,277,762 & 1,909,018 & $3.4371 \\
+ & HOTPOTQA & MIPROv2-Heavy & -- & 41,879,110 & 3,416,141 & $8.3316 \\
+ & HOVER & Baseline & -- & 824,938 & 236,463 & $0.2656 \\
+ & HOVER & DCPS-Compound & 320 & -- & -- & -- \\
+ & HOVER & GEPA & 2,000 & 23,444,958 & 5,183,510 & $6.6268 \\
+ & HOVER & GEPA-MERGE & -- & 21,073,676 & 4,453,260 & $5.8330 \\
+ & HOVER & MIPROv2-Heavy & -- & 21,979,584 & 2,975,930 & $5.0825 \\
+ & IFBENCH & Baseline & -- & 217,107 & 244,505 & $0.1793 \\
+ & IFBENCH & DCPS-Compound & 320 & -- & -- & -- \\
+ & IFBENCH & GEPA & 2,000 & 5,538,588 & 2,456,765 & $2.3048 \\
+ & IFBENCH & GEPA-MERGE & -- & 4,665,494 & 2,168,727 & $2.0011 \\
+ & IFBENCH & MIPROv2-Heavy & -- & 9,327,210 & 2,805,191 & $3.0822 \\
+ & LIVEBENCH-MATH & Baseline & -- & 59,566 & 189,570 & $0.1227 \\
+ & LIVEBENCH-MATH & DCPS-Compound & 320 & 540,000 & 860,000 & $0.5970 \\
+ & LIVEBENCH-MATH & GEPA & 2,000 & 2,861,713 & 3,056,794 & $2.2633 \\
+ & LIVEBENCH-MATH & GEPA-MERGE & -- & 2,708,440 & 2,826,589 & $2.1022 \\
+ & LIVEBENCH-MATH & MIPROv2-Heavy & -- & 7,622,861 & 2,071,042 & $2.3860 \\
+ & PUPA & Baseline & -- & 293,971 & 132,112 & $0.1234 \\
+ & PUPA & DCPS-Compound & 320 & 6,325,719 & 2,018,796 & $2.1601 \\
+ & PUPA & GEPA & 2,000 & 6,746,833 & 2,119,831 & $2.2839 \\
+ & PUPA & GEPA-MERGE & -- & 6,183,171 & 1,938,820 & $2.0908 \\
+ & PUPA & MIPROv2-Heavy & -- & 8,135,085 & 1,498,755 & $2.1195 \\
+\midrule
+Qwen3-8B & AIME-2025 & Baseline & -- & 25,944 & 1,375,227 & $0.8290 \\
+ & AIME-2025 & DCPS-Compound & 320 & -- & -- & -- \\
+ & AIME-2025 & MIPROv2-Heavy & -- & 2,331,238 & 17,915,438 & $11.0989 \\
+ & HOTPOTQA & DCPS-Compound & 320 & 4,960,000 & 4,780,000 & $2.7600 \\
+ & HOVER & DCPS-Compound & 320 & -- & -- & -- \\
+ & IFBENCH & DCPS-Compound & 320 & -- & -- & -- \\
+ & LIVEBENCH-MATH & Baseline & -- & 57,834 & 453,298 & $0.2807 \\
+ & LIVEBENCH-MATH & DCPS-Compound & 320 & -- & -- & -- \\
+ & LIVEBENCH-MATH & GEPA & 2,000 & 2,886,253 & 10,101,248 & $6.4937 \\
+ & LIVEBENCH-MATH & GEPA-MERGE & -- & 2,287,493 & 10,426,812 & $6.5992 \\
+ & LIVEBENCH-MATH & MIPROv2-Heavy & -- & 5,166,492 & 7,510,002 & $5.2810 \\
+ & PUPA & Baseline & -- & 137,478 & 155,270 & $0.1138 \\
+ & PUPA & DCPS-Compound & 320 & -- & -- & -- \\
+\midrule
+Unknown & UNKNOWN & GEPA & 2,000 & -- & -- & -- \\
+\midrule
+google/gemma-1.1-2b-it & MNLI & cs\_0.1 & 24,000 & 13,550,000 & -- & -- \\
+ & MRPC & cs\_0.1 & 16,000 & 6,686,000 & -- & -- \\
+ & QNLI & cs\_0.1 & 16,000 & 5,668,000 & -- & -- \\
+ & RTE & cs\_0.1 & 16,000 & 8,676,000 & -- & -- \\
+ & SNLI & cs\_0.1 & 24,000 & 11,216,000 & -- & -- \\
+ & SST2 & cs\_0.0 & 16,000 & 7,178,000 & -- & -- \\
+ & SST2 & cs\_0.1 & 16,000 & 7,178,000 & -- & -- \\
+\midrule
+google/gemma-1.1-7b-it & ACTIVE\_TO\_PASSIVE & Unknown & 12,480 & -- & -- & -- \\
+ & ANTONYMS & Unknown & 12,480 & -- & -- & -- \\
+ & CAUSAL\_JUDGMENT & Unknown & 4,500 & -- & -- & -- \\
+ & CAUSE\_AND\_EFFECT & Unknown & 10,140 & -- & -- & -- \\
+ & COMMON\_CONCEPT & Unknown & 6,630 & -- & -- & -- \\
+ & DIFF & Unknown & 12,480 & -- & -- & -- \\
+ & DISAMBIGUATION\_QA & Unknown & 4,500 & -- & -- & -- \\
+ & EPISTEMIC\_REASONING & Unknown & 4,500 & -- & -- & -- \\
+ & FIRST\_WORD\_LETTER & Unknown & 12,480 & -- & -- & -- \\
+ & HYPERBATON & Unknown & 4,500 & -- & -- & -- \\
+ & IMPLICATURES & Unknown & 4,500 & -- & -- & -- \\
+ & INFORMAL\_TO\_FORMAL & Unknown & 5,850 & -- & -- & -- \\
+ & LARGER\_ANIMAL & Unknown & 12,480 & -- & -- & -- \\
+ & LETTERS\_LIST & Unknown & 12,480 & -- & -- & -- \\
+ & LOGICAL\_FALLACY\_DETECTION & Unknown & 4,500 & -- & -- & -- \\
+ & MNLI & cs\_0.0 & 24,000 & 13,915,500 & -- & -- \\
+ & MNLI & cs\_0.1 & 24,000 & 13,474,667 & -- & -- \\
+ & MOVIE\_RECOMMENDATION & Unknown & 4,500 & -- & -- & -- \\
+ & MRPC & cs\_0.0 & 16,000 & 6,830,500 & -- & -- \\
+ & MRPC & cs\_0.1 & 16,000 & 6,374,000 & -- & -- \\
+ & NAVIGATE & Unknown & 4,500 & -- & -- & -- \\
+ & NEGATION & Unknown & 12,480 & -- & -- & -- \\
+ & NUM\_TO\_VERBAL & Unknown & 12,480 & -- & -- & -- \\
+ & ORTHOGRAPHY\_STARTS\_WITH & Unknown & 12,480 & -- & -- & -- \\
+ & PRESUPPOSITIONS\_AS\_NLI & Unknown & 4,500 & -- & -- & -- \\
+ & QNLI & cs\_0.0 & 16,000 & 7,557,000 & -- & -- \\
+ & QNLI & cs\_0.1 & 16,000 & 7,254,000 & -- & -- \\
+ & RHYMES & Unknown & 12,480 & -- & -- & -- \\
+ & RTE & cs\_0.0 & 16,000 & 9,101,000 & -- & -- \\
+ & RTE & cs\_0.1 & 16,000 & 9,322,667 & -- & -- \\
+ & RUIN\_NAMES & Unknown & 4,500 & -- & -- & -- \\
+ & SECOND\_WORD\_LETTER & Unknown & 12,480 & -- & -- & -- \\
+ & SENTENCE\_SIMILARITY & Unknown & 12,480 & -- & -- & -- \\
+ & SENTIMENT & Unknown & 12,480 & -- & -- & -- \\
+ & SINGULAR\_TO\_PLURAL & Unknown & 12,480 & -- & -- & -- \\
+ & SNARKS & Unknown & 4,500 & -- & -- & -- \\
+ & SNLI & cs\_0.0 & 24,000 & 14,075,500 & -- & -- \\
+ & SNLI & cs\_0.1 & 24,000 & 14,258,667 & -- & -- \\
+ & SPORTS\_UNDERSTANDING & Unknown & 4,500 & -- & -- & -- \\
+ & SST2 & cs\_0.0 & 16,000 & 9,261,200 & -- & -- \\
+ & SST2 & cs\_0.1 & 16,000 & 9,038,500 & -- & -- \\
+ & SUM & Unknown & 12,480 & -- & -- & -- \\
+ & SYNONYMS & Unknown & 12,480 & -- & -- & -- \\
+ & TAXONOMY\_ANIMAL & Unknown & 12,480 & -- & -- & -- \\
+ & TRANSLATION\_EN-DE & Unknown & 12,480 & -- & -- & -- \\
+ & TRANSLATION\_EN-ES & Unknown & 12,480 & -- & -- & -- \\
+ & TRANSLATION\_EN-FR & Unknown & 12,480 & -- & -- & -- \\
+ & WINOWHY & Unknown & 4,500 & -- & -- & -- \\
+ & WORD\_IN\_CONTEXT & Unknown & 12,480 & -- & -- & -- \\
+\midrule
+openrouter/openai/gpt-4o-mini & HOTPOTQA & DCPS-Compound & 320 & -- & -- & -- \\
+ & PUPA & DCPS-Compound & 320 & 2,548,256 & 701,310 & $0.8030 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

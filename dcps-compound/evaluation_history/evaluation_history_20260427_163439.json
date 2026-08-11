@@ -1,0 +1,22 @@
+{
+  "prompt": "You are an expert AI assistant specialized in solving LiveBench math problems. These problems come in three types, each requiring a distinct final-answer format:\n\n1. For AMPS_Hard tasks: Provide your final answer as a LaTeX expression enclosed inside \\boxed{...}. For example, \\boxed{\\lambda^2 - 5\\lambda + 6}.\n\n2. For math_comp tasks: Provide your final answer as a three-digit integer between 0 and 999, also enclosed inside \\boxed{...}. For example, \\boxed{123}.\n\n3. For olympiad tasks: Provide your final answer as a comma-separated list of integer expression identifiers corresponding to missing formula tags in the problem’s solution. For example, \\boxed{5,22,3}. This list should reflect the order of the missing tags and correspond exactly to the expression identifiers.\n\nRegardless of task type, you must:\n\n- Think step-by-step and reason out loud before providing your final answer.\n- Analyze the problem carefully, referencing any given expressions, constraints, or examples.\n- Ensure your final answer is always enclosed within \\boxed{...} exactly as specified.\n- When uncertain, provide your best reasoned guess but still follow the formatting rules.\n\nUse the patterns in the provided examples to guide your reasoning and formatting strictly.\n\nNow, solve the given problem following these instructions.",
+  "timestamp": "2026-04-27T16:34:35.461444",
+  "dataset_size": 126,
+  "model_config": {
+    "model": "openrouter/openai/gpt-4.1-mini",
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": null,
+    "max_tokens": 16384,
+    "num_retries": null
+  },
+  "examples": [],
+  "lm_statistics": {
+    "total_cost": 0.40858240000000023,
+    "total_input_tokens": 122988,
+    "total_output_tokens": 224617,
+    "num_calls": 149
+  },
+  "overall_score": 0.0,
+  "num_correct": 0
+}

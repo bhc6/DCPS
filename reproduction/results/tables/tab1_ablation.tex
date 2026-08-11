@@ -1,0 +1,19 @@
+\begin{table}[ht]
+\centering
+\caption{Ablation Results across GLUE datasets on Gemma1.1-7B.}
+\label{tab:glue_ablation}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}lccccc@{} }
+\toprule
+\textbf{Dataset} & \textbf{CS 0.1 (RL)} & \textbf{CS 0.0 (RAE)} & $\Delta$\textbf{(RL - RAE)} & \textbf{95\% CI} & \textbf{Cohen's d} \\ \midrule
+MNLI & \textbf{67.2} & 64.3 & +2.97 & [0.67, 5.71] & 1.16 \\
+MRPC & 72.0 & \textbf{73.0} & -0.98 & [-3.43, 0.49] & -0.46 \\
+QNLI & 78.2 & \textbf{78.8} & -0.55 & [-1.26, 0.00] & -0.85 \\
+RTE & 81.2 & \textbf{81.4} & -0.18 & [-0.54, 0.00] & -0.58 \\
+SNLI & 70.5 & \textbf{72.5} & -1.93 & [-4.56, 0.00] & -0.82 \\
+SST2 & 89.5 & \textbf{90.8} & -1.30 & [-2.87, 0.00] & -0.90 \\
+
+\bottomrule
+\end{tabular}
+}
+\end{table}

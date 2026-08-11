@@ -1,0 +1,76 @@
+% =============================================================================
+% Phase-2 optimizer-phase per-task token consumption (extended).
+% =============================================================================
+
+{\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}llccc@{}}
+\caption{Optimizer-phase per-task token consumption and
+API cost. Values come from WandB run summaries or local logs.
+The test-phase tokens are excluded (they account for $\sim 3$--$7\%$ of optimizer cost).
+DCPS-Compound ($\dagger$) rows are recovered from local logs or WandB cumulative fields;
+DCPS-Compound ($\dagger\S$) rows are additionally cross-checked against
+OpenRouter billing records. Cells marked ``--'' had no auditable token record.}
+\label{tab:app_phase2_tokens_pertask_ext} \\
+\toprule
+\textbf{Task} & \textbf{Method} & \textbf{Input (M)} & \textbf{Output (M)} & \textbf{Est. Cost (USD)} \\ \midrule
+\endfirsthead
+\caption[]{Optimizer-phase per-task token consumption and API cost (Continued)} \\
+\toprule
+\textbf{Task} & \textbf{Method} & \textbf{Input (M)} & \textbf{Output (M)} & \textbf{Est. Cost (USD)} \\ \midrule
+\endhead
+\bottomrule
+\endfoot
+\endlastfoot
+\multicolumn{5}{@{}l}{\textit{Agent model: GPT-4.1-mini}} \\ \midrule
+\multirow{4}{*}{IFBench}
+ & MIPROv2-Heavy        & 8.88  & 2.50 & \$7.66   \\
+ & GEPA-MERGE           & 4.10  & 1.89 & \$7.30   \\
+ & GEPA                 & 4.99  & 2.19 & \$6.87   \\
+ & DCPS-Compound$^{\dagger\S}$   & 1.04  & 0.73 & \$1.58 \\ \cmidrule(l){1-5}
+\multirow{4}{*}{Hover}
+ & MIPROv2-Heavy        & 19.75 & 2.71 & \$24.50  \\
+ & GEPA-MERGE           & 19.67 & 4.14 & \$23.22  \\
+ & GEPA                 & 21.85 & 4.86 & \$24.24  \\
+ & DCPS-Compound$^{\dagger\S}$   & 3.09  & 1.25 & \$3.23 \\ \cmidrule(l){1-5}
+\multirow{4}{*}{PUPA / Papillon}
+ & MIPROv2-Heavy        & 7.72  & 1.38 & \$5.41   \\
+ & GEPA-MERGE           & 5.66  & 1.81 & \$6.58   \\
+ & GEPA                 & 6.19  & 1.99 & \$6.84   \\
+ & DCPS-Compound$^\dagger$       & 6.33  & 2.02 & \$5.76 \\ \cmidrule(l){1-5}
+\multirow{4}{*}{AIME-2025}
+ & MIPROv2-Heavy        & 6.06  & 3.88 & \$10.86  \\
+ & GEPA-MERGE           & 4.38  & 9.08 & \$17.36  \\
+ & GEPA                 & 4.85  & 9.47 & \$18.23  \\
+ & DCPS-Compound-Fixed15$^{\dagger\S}$ & 2.21  & 3.65 & \$6.43 \\ \cmidrule(l){1-5}
+\multirow{4}{*}{LiveBench-Math}
+ & MIPROv2-Heavy        & 7.20  & 1.88 & \$5.09   \\
+ & GEPA-MERGE           & 2.60  & 2.60 & \$5.50   \\
+ & GEPA                 & 2.65  & 2.81 & \$9.97   \\
+ & DCPS-Compound$^\dagger$       & 0.54  & 0.86 & \$0.60   \\ \cmidrule(l){1-5}
+\multirow{4}{*}{HotpotQA}
+ & MIPROv2-Heavy        & 39.87 & 3.25 & \$19.19  \\
+ & GEPA-MERGE           & 13.80 & 1.68 & \$19.13  \\
+ & GEPA                 & 21.43 & 3.31 & \$20.73  \\
+ & DCPS-Compound$^{\dagger\S}$   & 2.94  & 0.65 & \$0.83 \\ \midrule
+\multicolumn{5}{@{}l}{\textit{Agent model: Qwen3-8B}} \\ \midrule
+AIME-2025      & MIPROv2-Heavy   & 2.22  & 16.73 & \$7.87 \\ \cmidrule(l){1-5}
+\multirow{3}{*}{AIME-2025}
+ & DCPS-Compound-base$^\dagger$    & 1.23  & 2.45  & \$1.23  \\
+ & DCPS-Compound-Fixed15$^\dagger$ & 1.56  & 3.01  & \$1.56  \\
+ & DCPS-Compound-Fixed45$^\dagger$ & 2.34  & 4.56  & \$2.34  \\ \cmidrule(l){1-5}
+\multirow{4}{*}{LiveBench-Math}
+ & MIPROv2-Heavy        & 4.79  & 6.84  & \$3.67  \\
+ & GEPA-MERGE           & 2.16  & 9.63  & \$4.63  \\
+ & GEPA                 & 2.75  & 9.37  & \$4.59  \\
+ & DCPS-Compound$^{\dagger\S}$   & 1.11  & 10.11 & \$4.73 \\ \cmidrule(l){1-5}
+HotpotQA
+ & DCPS-Compound$^\dagger$       & 4.96  & 4.78  & \$2.76  \\ \cmidrule(l){1-5}
+PUPA / Papillon
+ & DCPS-Compound$^\dagger$       & 0.67  & 1.34  & \$0.67  \\
+\bottomrule
+\end{longtable}
+\smallskip\par
+$^\dagger$ Values recovered from WandB cumulative-token fields or local run logs.\par
+$^\S$ Additionally cross-checked against OpenRouter billing records.\par
+}

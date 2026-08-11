@@ -1,0 +1,26 @@
+\begin{table}[ht]
+\centering
+\caption{Task-level comparison on Qwen3-8B and GPT-4.1-mini. Per-column best accuracy within each backbone is in \textbf{bold}; macro-average is the unweighted mean across six benchmarks. The bottom block lists the total optimization budget (\# rollouts) per task, shared across both backbones.}
+\label{tab:compound_results}
+\makebox[\textwidth][c]{\resizebox{1.08\textwidth}{!}{%
+\begin{tabular}{@{}llccccccc@{}}
+\toprule
+\textbf{Backbone} & \textbf{Method} & \textbf{HotpotQA} & \textbf{IFBench} & \textbf{HoVer} & \textbf{PUPA} & \textbf{AIME-2025} & \textbf{LiveBench-Math} & \textbf{Macro-Avg} \\ \midrule
+\multirow{5}{*}{Qwen3-8B}
+& Baseline        & 40.33 & 38.61 & 33.67 & 81.55 & 47.33 & 65.01 & 51.08 \\
+& MIPROv2-Heavy   & 58.67 & 38.61 & 44.00 & 78.67 & 58.00 & 67.46 & 57.57 \\
+& GEPA            & \textbf{63.33} & 40.65 & 53.33 & 87.57 & 59.33 & \textbf{70.57} & \textbf{62.46} \\
+& GEPA-MERGE      & 61.33 & 29.08 & 52.00 & 84.81 & \textbf{62.67} & 66.28 & 59.36 \\
+& DCPS-Compound   & 61.33 & \textbf{43.88} & \textbf{56.67} & \textbf{90.02} & 55.33 & 65.08 & 62.05 \\ \midrule
+\multirow{5}{*}{GPT-4.1-mini}
+& Baseline        & 36.10 & 48.13 & 40.33 & 80.81 & 40.00 & 55.80 & 50.20 \\
+& MIPROv2-Heavy   & 55.00 & 51.19 & 47.33 & 83.59 & 46.67 & 57.30 & 56.85 \\
+& GEPA            & \textbf{65.00} & 49.83 & 49.67 & 90.10 & \textbf{48.00} & \textbf{64.21} & \textbf{61.14} \\
+& GEPA-MERGE      & 63.33 & 49.49 & 49.00 & 93.52 & 46.67 & 61.14 & 60.53 \\
+& DCPS-Compound   & 59.00 & \textbf{51.53} & \textbf{54.67} & \textbf{94.09} & \textbf{48.00} & 59.52 & \textbf{61.14} \\ \midrule
+\multicolumn{9}{@{}l@{}}{\textit{Total optimization budget (\# rollouts)}} \\
+\multicolumn{2}{@{}l}{GEPA/GEPA-MERGE/MIPROv2-Heavy} & 6{,}871 & 3{,}593 & 7{,}051 & 2{,}426 & 1{,}839 & 1{,}839 & 3{,}936 \\
+\multicolumn{2}{@{}l}{DCPS-Compound}         & 1{,}020 & 620 & 7{,}068 & 920 & 320 & 620 & 1{,}761 \\
+\bottomrule
+\end{tabular}}}
+\end{table}

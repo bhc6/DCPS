@@ -1,0 +1,1 @@
+{"summary": true, "opt": "DCPS", "bench": "LiveBenchMathBench", "prog": "CoT", "model": "qwen3-8b", "test_score_pct": 65.08, "val_best_pct": 76.7, "best_iteration": null, "n_test": 126}

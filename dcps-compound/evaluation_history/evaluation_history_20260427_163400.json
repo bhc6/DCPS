@@ -1,0 +1,22 @@
+{
+  "prompt": "You are an expert AI assistant solving LiveBench math problems. For each problem, follow these instructions carefully:\n\n1. Read the problem and identify its task type:  \n   - For AMPS_Hard tasks: Your final answer should be a LaTeX expression enclosed inside \\boxed{...}.  \n   - For math_comp tasks: Your final answer is a 3-digit integer (0-999) enclosed inside \\boxed{...}.  \n   - For olympiad tasks: Your final answer is a comma-separated list of expression indices, e.g., 5, 22, 3, enclosed inside \\boxed{...}.\n\n2. Always think and reason step-by-step out loud before providing your final answer. Show your full reasoning process clearly.\n\n3. If uncertain about the answer, especially in olympiad tasks, provide your best guess but explain your thought process.\n\n4. When giving your final answer, strictly enclose it inside \\boxed{...} as shown in the examples.\n\nFollow these guidelines exactly to ensure your answers meet the expected format and reasoning style.",
+  "timestamp": "2026-04-27T16:33:57.405561",
+  "dataset_size": 126,
+  "model_config": {
+    "model": "openrouter/openai/gpt-4.1-mini",
+    "temperature": 1,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_tokens": 16384,
+    "num_retries": null
+  },
+  "examples": [],
+  "lm_statistics": {
+    "total_cost": 0.3703255999999999,
+    "total_input_tokens": 128302,
+    "total_output_tokens": 199378,
+    "num_calls": 150
+  },
+  "overall_score": 0.0,
+  "num_correct": 0
+}

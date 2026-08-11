@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\caption{Phase-2 average per-run token consumption and estimated API cost, by agent model and method. Means are taken over the audited runs in \texttt{by\_task\_runs.csv} that contain non-null token counters; the ``$n_{\text{tok}}$ / $n_{\text{runs}}$'' column reports how many of the recorded runs actually expose token-level logs. Source fields: WandB summaries \texttt{summary\_optimizer/input\_tokens} and \texttt{summary\_optimizer/output\_tokens} (optimizer phase) plus the corresponding eval-time counters, aggregated into the \texttt{input\_tokens} / \texttt{output\_tokens} columns of \texttt{by\_task\_runs.csv}. Input and output tokens are reported in millions (M); estimated cost is in USD using each model's public token price at the time of logging. DCPS-Compound runs do not populate \texttt{summary\_optimizer/*\_tokens} in our harness (0 of 28 raw WandB records), so Qwen3-8B DCPS-Compound is reported as N/A and GPT-4.1-mini DCPS-Compound reflects a single eval-time-only sample (1 of 9).}
+\label{tab:app_phase2_tokens}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+\textbf{Model} & \textbf{Method} & \textbf{$n_{\text{tok}}$ / $n_{\text{runs}}$} & \textbf{Mean Input (M)} & \textbf{Mean Output (M)} & \textbf{Mean Est.\ Cost (USD)} \\ \midrule
+\multirow{5}{*}{GPT-4.1-mini}
+ & Baseline       & 6 / 14 & 0.35  & 0.16  & \$0.70  \\
+ & MIPROv2-Heavy  & 6 / 6  & 9.75  & 3.25  & \$12.62 \\
+ & GEPA-MERGE     & 7 / 7  & 9.22  & 4.90  & \$15.23 \\
+ & GEPA           & 6 / 6  & 11.16 & 4.60  & \$15.89 \\
+ & \textbf{DCPS-Compound}  & 1 / 9  & \textbf{6.33}  & \textbf{2.02}  & \textbf{\$2.16}  \\ \midrule
+\multirow{5}{*}{Qwen3-8B}
+ & Baseline       & 9 / 18 & 0.07  & 0.49  & \$0.12  \\
+ & MIPROv2-Heavy  & 3 / 3  & 4.22  & 10.98 & \$1.61  \\
+ & GEPA-MERGE     & 2 / 2  & 2.29  & 10.43 & \$2.44  \\
+ & GEPA           & 2 / 2  & 2.89  & 10.10 & \$2.31  \\
+ & \textbf{DCPS-Compound}  & 0 / 23 & N/A   & N/A   & N/A     \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

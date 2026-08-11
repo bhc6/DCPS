@@ -1,0 +1,13 @@
+model,table_task,method,status,run_id,run_name,confidence,source,n_tok_over_n,input_m,output_m,cost_usd,raw_input_tokens,raw_output_tokens,raw_cost_usd,reason
+GPT-4.1-mini,IFBench,FSPO,usable,0tv7woty,dynamic_fewshot_gpt41mini_20iter_3shot,A_clean_time_model,OpenRouter clean time-window + model,1 / 1,1.04,0.73,\$1.58,1044760,725433,1.577845,
+GPT-4.1-mini,Hover,FSPO,usable,wqp8lojs,dynamic_fewshot_gpt41mini_20iter_3shot,A_clean_time_model,OpenRouter clean time-window + model,1 / 1,3.09,1.25,\$3.23,3088706,1245309,3.2265240000000004,
+GPT-4.1-mini,PUPA / Papillon,FSPO,usable,p16uyuga,pupa_gpt_nobase_subset45_20iter,A_wandb_direct,WandB history cumulative,1 / 1,6.33,2.02,\$5.76,6325719,2018796,5.7603612,
+GPT-4.1-mini,AIME-2025,FSPO-Fixed15,usable,mwjwwnoh,origin_gpt_nobase_fixed15val_64t_20iter_3shot_top1,B_same_task_key_mix,OpenRouter clean time-window + model,1 / 1,2.21,3.65,\$6.43,2209061,3649235,6.425326999999999,
+GPT-4.1-mini,LiveBench-Math,FSPO,not_usable_C_overlap_same_model_fspo,fm6705r5,dynamic_fewshot_20iter_3shot,C_overlap_same_model_fspo,,0 / 1,--,--,--,,,,not_usable_C_overlap_same_model_fspo
+GPT-4.1-mini,HotpotQA,FSPO,usable,89wk61np,hotpot_gpt_subset50_20iter,A_clean_time_model,OpenRouter clean time-window + model,1 / 1,0.82,0.19,\$0.64,824396,192609,0.6375139999999999,
+Qwen3-8B,AIME-2025,FSPO-base,usable,wmst5cop,dynamic_fewshot_20iter_3shot,A_clean_time_model,OpenRouter clean time-window + model,1 / 1,0.34,0.61,\$0.31,336497,613121,0.314627,
+Qwen3-8B,AIME-2025,FSPO-Fixed15,not_usable_C_overlap_same_model_fspo,86zmx5b0,dspy_qwen3-8b_math-specific_fixed15val_nothink_20iter_3shot_top1,C_overlap_same_model_fspo,,0 / 1,--,--,--,,,,not_usable_C_overlap_same_model_fspo
+Qwen3-8B,AIME-2025,FSPO-Fixed45,not_usable_C_overlap_same_model_fspo,8v2qjgrx,dspy_qwen3-8b_math-specific_fixed45val_20iter_3shot,C_overlap_same_model_fspo,,0 / 1,--,--,--,,,,not_usable_C_overlap_same_model_fspo
+Qwen3-8B,LiveBench-Math,FSPO,usable,b6iz2dax,dynamic_fewshot_20iter_3shot,A_clean_time_model,OpenRouter clean time-window + model,1 / 1,1.11,10.11,\$4.73,1111392,10109574,4.729177,
+Qwen3-8B,HotpotQA,FSPO,not_usable_C_cross_task_key_mix,trvbqp3c,hotpot_qwen_subset50_20iter,C_cross_task_key_mix,,0 / 1,--,--,--,,,,not_usable_C_cross_task_key_mix
+Qwen3-8B,PUPA / Papillon,FSPO,not_usable_C_overlap_same_model_fspo,3y0tizlv,pupa_qwen_nobase_dual_20iter,C_overlap_same_model_fspo,,0 / 1,--,--,--,,,,not_usable_C_overlap_same_model_fspo

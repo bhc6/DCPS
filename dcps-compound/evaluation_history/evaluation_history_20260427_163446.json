@@ -1,0 +1,22 @@
+{
+  "prompt": "You are a helpful AI assistant designed to solve LiveBench math problems. For every problem, please think carefully and reason step-by-step before providing your final answer. \n\nDepending on the task type, your final answer must follow these strict formatting rules:\n\n1. For AMPS_Hard tasks: Your final answer must be a LaTeX expression enclosed inside \\boxed{...}. Example: \\boxed{\\frac{a}{b}}.\n\n2. For math_comp tasks: Your final answer must be a 3-digit integer string, including leading zeros if needed, between 000 and 999. For example, \\boxed{068} or \\boxed{972}.\n\n3. For olympiad tasks: Your final answer must be a comma-separated list of integers representing expression indices. For example, \\boxed{5,22,3}.\n\nAlways place the final answer inside \\boxed{...} at the very end of your response, after your detailed step-by-step reasoning. If you are unsure about the correct answer, provide your best guess, but maintain the required format.\n\nRefer to the examples provided for how to format the final answer according to the task type. Your step-by-step explanation should be clear and logical, leading naturally to your final boxed answer.",
+  "timestamp": "2026-04-27T16:34:43.338555",
+  "dataset_size": 126,
+  "model_config": {
+    "model": "openrouter/openai/gpt-4.1-mini",
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": null,
+    "max_tokens": 16384,
+    "num_retries": null
+  },
+  "examples": [],
+  "lm_statistics": {
+    "total_cost": 0.40858240000000023,
+    "total_input_tokens": 122988,
+    "total_output_tokens": 224617,
+    "num_calls": 149
+  },
+  "overall_score": 0.0,
+  "num_correct": 0
+}

@@ -1,0 +1,19 @@
+split,subset,metric,PPO_mean,RAE_seed6,RAE_seed42,RAE_seed3,RAE_mean,RAE_std,GFLOWPO_mean,GFLOWPO_std
+MC,causal_judgment,Accuracy,58.75,58.13,58.44,54.37,56.98,2.27,58.75,1.08
+MC,disambiguation_qa,Accuracy,64.70,67.11,64.25,65.79,65.72,1.43,64.77,1.11
+MC,epistemic_reasoning,Accuracy,59.49,54.31,63.65,63.50,60.49,5.35,58.97,5.19
+MC,hyperbaton,Accuracy,75.13,72.79,75.63,74.68,74.37,1.45,74.82,3.72
+MC,implicatures,Accuracy,80.84,83.12,83.33,82.90,83.12,0.22,85.43,0.97
+MC,logical_fallacy_detection,Accuracy,55.78,52.85,53.10,52.96,52.97,0.13,53.19,0.22
+MC,movie_recommendation,Accuracy,59.56,57.45,55.74,61.70,58.30,3.07,73.55,3.82
+MC,navigate,Accuracy,52.42,51.24,52.58,50.82,51.55,0.92,52.47,0.31
+MC,presuppositions_as_nli,Accuracy,43.40,45.53,44.54,46.24,45.44,0.85,45.96,2.34
+MC,ruin_names,Accuracy,32.77,25.84,28.95,28.95,27.91,1.80,27.76,1.75
+MC,snarks,Accuracy,51.99,51.66,50.99,50.99,51.21,0.39,60.04,5.31
+MC,sports_understanding,Accuracy,55.94,58.56,56.08,58.45,57.70,1.40,65.91,2.00
+Gen,dyck_languages,Exact Match,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+Gen,gender_inclusive_sentences_german,Exact Match,90.39,84.70,87.81,89.74,87.42,2.54,90.44,0.68
+Gen,object_counting,Exact Match,32.86,35.67,34.43,33.96,34.69,0.88,38.18,2.78
+Gen,operators,Exact Match,57.15,52.03,48.62,50.72,50.46,1.72,53.52,4.01
+Gen,tense,Exact Match,99.22,94.22,97.19,96.33,95.91,1.53,96.28,0.71
+Gen,word_sorting,Exact Match,98.21,94.20,93.97,98.32,95.50,2.45,95.55,3.56

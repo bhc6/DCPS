@@ -1,0 +1,98 @@
+[
+    {
+        "Model":  "gpt-41-mini",
+        "Method":  "Baseline",
+        "Runs":  6,
+        "TotalCost":  3.4437180000000005,
+        "AvgCost":  0.573953,
+        "TestCost":  3.4437180000000005,
+        "OptCost":  0,
+        "TotalIn":  2060318,
+        "TotalOut":  1167339,
+        "TotalTokens":  3227657
+    },
+    {
+        "Model":  "gpt-41-mini",
+        "Method":  "GEPA",
+        "Runs":  6,
+        "TotalCost":  86.587630799999971,
+        "AvgCost":  14.431271799999996,
+        "TestCost":  4.580817200000002,
+        "OptCost":  82.006813599999958,
+        "TotalIn":  65785805,
+        "TotalOut":  26547517,
+        "TotalTokens":  92333322
+    },
+    {
+        "Model":  "gpt-41-mini",
+        "Method":  "GEPA-MERGE",
+        "Runs":  5,
+        "TotalCost":  66.797062000000082,
+        "AvgCost":  13.359412400000016,
+        "TestCost":  3.4197368000000012,
+        "OptCost":  63.377325200000072,
+        "TotalIn":  48234214,
+        "TotalOut":  13897187,
+        "TotalTokens":  62131401
+    },
+    {
+        "Model":  "gpt-41-mini",
+        "Method":  "MIPROv2-Heavy",
+        "Runs":  6,
+        "TotalCost":  75.443013999999934,
+        "AvgCost":  12.573835666666655,
+        "TestCost":  4.1747620000000012,
+        "OptCost":  71.268251999999933,
+        "TotalIn":  123230650,
+        "TotalOut":  20737419,
+        "TotalTokens":  143968069
+    },
+    {
+        "Model":  "qwen3-8b",
+        "Method":  "Baseline",
+        "Runs":  4,
+        "TotalCost":  0,
+        "AvgCost":  0,
+        "TestCost":  0,
+        "OptCost":  0,
+        "TotalIn":  0,
+        "TotalOut":  0,
+        "TotalTokens":  0
+    },
+    {
+        "Model":  "qwen3-8b",
+        "Method":  "GEPA",
+        "Runs":  4,
+        "TotalCost":  0,
+        "AvgCost":  0,
+        "TestCost":  0,
+        "OptCost":  0,
+        "TotalIn":  0,
+        "TotalOut":  0,
+        "TotalTokens":  0
+    },
+    {
+        "Model":  "qwen3-8b",
+        "Method":  "GEPA-MERGE",
+        "Runs":  4,
+        "TotalCost":  0,
+        "AvgCost":  0,
+        "TestCost":  0,
+        "OptCost":  0,
+        "TotalIn":  0,
+        "TotalOut":  0,
+        "TotalTokens":  0
+    },
+    {
+        "Model":  "qwen3-8b",
+        "Method":  "MIPROv2-Heavy",
+        "Runs":  4,
+        "TotalCost":  0,
+        "AvgCost":  0,
+        "TestCost":  0,
+        "OptCost":  0,
+        "TotalIn":  0,
+        "TotalOut":  0,
+        "TotalTokens":  0
+    }
+]

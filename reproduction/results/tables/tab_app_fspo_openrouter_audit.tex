@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering
+\caption{Audited DCPS-Compound OpenRouter/WandB token-recovery runs. Rows shown here have either direct WandB cumulative-token fields or a clean OpenRouter model/time-window match with no same-model WandB overlap. GPT-4o-mini runs are excluded from the paper token recovery.}
+\label{tab:app_fspo_openrouter_audit}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llllrrrr@{}}
+\toprule
+\textbf{Model} & \textbf{Task} & \textbf{Run} & \textbf{Confidence} & \textbf{Req.} & \textbf{Input (M)} & \textbf{Output (M)} & \textbf{Cost} \\ \midrule
+GPT-4.1-mini & AIME-2025 & mwjwwnoh & B\_same\_task\_key\_mix & 909 & 2.21 & 3.65 & \$6.43 \\
+GPT-4.1-mini & HotpotQA & 89wk61np & A\_clean\_time\_model & 1083 & 0.82 & 0.19 & \$0.64 \\
+GPT-4.1-mini & Hover & wqp8lojs & A\_clean\_time\_model & 3612 & 3.09 & 1.25 & \$3.23 \\
+GPT-4.1-mini & IFBench & 0tv7woty & A\_clean\_time\_model & 1807 & 1.04 & 0.73 & \$1.58 \\
+GPT-4.1-mini & IFBench & w5dkndzl & B\_same\_task\_key\_mix & 4748 & 3.16 & 3.01 & \$6.08 \\
+GPT-4.1-mini & PUPA & p16uyuga & A\_wandb\_direct & 7404 & 8.02 & 2.61 & \$7.17 \\
+Qwen3-8B & AIME-2025 & wmst5cop & A\_clean\_time\_model & 396 & 0.34 & 0.61 & \$0.31 \\
+Qwen3-8B & LiveBench-Math & b6iz2dax & A\_clean\_time\_model & 1450 & 1.11 & 10.11 & \$4.73 \\
+Qwen3-8B & LiveBench-Math & gs527dox & A\_clean\_time\_model & 741 & 0.62 & 0.71 & \$0.40 \\
+Qwen3-8B & LiveBench-Math & prmdtdw1 & A\_clean\_time\_model & 136 & 0.10 & 0.16 & \$0.08 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

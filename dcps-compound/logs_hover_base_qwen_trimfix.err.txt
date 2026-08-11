@@ -1,0 +1,59 @@
+[92m07:58:28 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032). Falling back to local backup.
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: bhc6 (awesome-prompt) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\123\Desktop\gepa\examples\hover\baseline_test.py", line 142, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\123\Desktop\gepa\examples\hover\baseline_test.py", line 96, in main
+    wandb.init(
+    ~~~~~~~~~~^
+        project="hover-baseline-test",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<18 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1597, in init
+    get_sentry().reraise(e)
+    ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\analytics\sentry.py", line 190, in reraise
+    raise exc.with_traceback(tb)
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1580, in init
+    run = wi.init(run_settings, run_config, run_printer)
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 894, in init
+    service = self._wl.ensure_service()
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\sdk\wandb_setup.py", line 387, in ensure_service
+    self._connection = service_connection.connect_to_service(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._asyncer,
+        ^^^^^^^^^^^^^^
+        self.settings,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\sdk\lib\service\service_connection.py", line 43, in connect_to_service
+    return _start_and_connect_service(asyncer, settings)
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\sdk\lib\service\service_connection.py", line 56, in _start_and_connect_service
+    proc = service_process.start(settings)
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\sdk\lib\service\service_process.py", line 35, in start
+    get_sentry().reraise(e)
+    ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\analytics\sentry.py", line 190, in reraise
+    raise exc.with_traceback(tb)
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\sdk\lib\service\service_process.py", line 33, in start
+    return _launch_server(settings)
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\sdk\lib\service\service_process.py", line 105, in _launch_server
+    token = service_port_file.poll_for_token(
+        port_file,
+        proc,
+        timeout=settings.x_service_wait,
+    )
+  File "C:\Users\123\Desktop\gepa\.venv\Lib\site-packages\wandb\sdk\lib\service\service_port_file.py", line 63, in poll_for_token
+    raise ServicePollForTokenError(
+        f"Failed to read port info after {timeout} seconds.",
+    )
+wandb.sdk.lib.service.service_port_file.ServicePollForTokenError: Failed to read port info after 30.0 seconds.

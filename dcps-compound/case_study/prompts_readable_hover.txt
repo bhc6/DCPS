@@ -1,0 +1,48 @@
+
+======================================================================
+### DCPS hover_gpt best (iter 44, val 0.5667) ###
+======================================================================
+
+--- stage [summarize1] ---
+BASELINE (67 chars): Given the fields `claim`, `passages`, produce the fields `summary`.
+DCPS (662 chars):
+You are given a claim and a set of passages retrieved in the first hop from Wikipedia abstracts. Your task is to produce a concise summary that captures the key entities, relationships, and any ambiguous or unresolved references found in these passages as they relate to verifying the claim. Focus on identifying important bridge entities or relations that the next retrieval query can pursue to uncover further supporting evidence. This summary should help formulate a next-hop retrieval query that maximizes recall of all relevant supporting documents. Do not copy passages verbatim; synthesize key points relevant to the claim and potential information needs.
+
+--- stage [create_query_hop2] ---
+BASELINE (66 chars): Given the fields `claim`, `summary_1`, produce the fields `query`.
+DCPS (622 chars):
+You are given the original claim and the summary produced from the first hop’s passages. Your task is to generate a precise and effective BM25 retrieval query for the second hop. Construct your query to include critical entities, disambiguating context, and linking concepts surfaced in the summary and claim. Focus on including bridge entities or relations that connect initial evidence towards deeper supporting documents. The query should maximize multi-hop recall by guiding the second retrieval toward relevant Wikipedia abstracts that might cover unresolved aspects or related facts needed to verify the claim fully.
+
+--- stage [summarize2] ---
+BASELINE (78 chars): Given the fields `claim`, `context`, `passages`, produce the fields `summary`.
+DCPS (650 chars):
+You are given the claim, the summary from the first hop, and a new set of passages retrieved in the second hop. Your task is to create a concise summary highlighting important entities, relationships, or new evidence related to the claim found in these passages. Emphasize any unresolved or ambiguous references and bridge entities that remain to be explored. This summary should inform the formulation of the third hop’s retrieval query, aiming to maximize coverage of all gold supporting documents by identifying what the final query must target next. Provide a clear, relevant synthesis for query generation without copying original text verbatim.
+
+--- stage [create_query_hop3] ---
+BASELINE (79 chars): Given the fields `claim`, `summary_1`, `summary_2`, produce the fields `query`.
+DCPS (537 chars):
+You are given the claim, and summaries produced after the first and second hops. Your task is to generate a comprehensive BM25 retrieval query for the third and final hop. Use entities, key relations, and disambiguating details identified in the preceding summaries and claim to construct a query that targets documents still needed to fully verify the claim. Focus on covering remaining ambiguous or unresolved connections with precise and descriptive terms that maximize recall of all relevant Wikipedia abstracts supporting the claim.
+
+======================================================================
+### DCPS hover_qwen best (iter 188, val 0.6000) ###
+======================================================================
+
+--- stage [summarize1] ---
+BASELINE (67 chars): Given the fields `claim`, `passages`, produce the fields `summary`.
+DCPS (307 chars):
+Summarize the retrieved passages in 3-5 concise sentences, highlighting entities, relations, and unresolved references directly tied to the claim. Identify key terms that the next query must bridge to uncover supporting evidence. Prioritize entities that could link to additional context in subsequent hops.
+
+--- stage [create_query_hop2] ---
+BASELINE (66 chars): Given the fields `claim`, `summary_1`, produce the fields `query`.
+DCPS (366 chars):
+Write a BM25 query that explicitly connects the claim to the first summary's unresolved references. Use entity bridges (e.g., names, titles) and disambiguated context (e.g., dates, roles) to retrieve documents that expand on the claim's components. Avoid vague terms; instead, focus on specific attributes that would help uncover supporting evidence in the next hop.
+
+--- stage [summarize2] ---
+BASELINE (78 chars): Given the fields `claim`, `context`, `passages`, produce the fields `summary`.
+DCPS (321 chars):
+Summarize the retrieved passages in 3-5 concise sentences, contextualizing them within the claim and the first summary. Extract entities, relationships, and unresolved references that the final query must address. Highlight contradictions or gaps in the current evidence that require further exploration in the final hop.
+
+--- stage [create_query_hop3] ---
+BASELINE (79 chars): Given the fields `claim`, `summary_1`, `summary_2`, produce the fields `query`.
+DCPS (404 chars):
+Write a BM25 query that synthesizes the claim, first summary, and second summary to target the remaining unresolved references. Use explicit entity bridges, disambiguated context, and logical connectors (e.g., "related to," "associated with") to retrieve documents that fully cover the gold supporting-doc titles. Prioritize specificity to ensure all relevant evidence is captured in the final retrieval.

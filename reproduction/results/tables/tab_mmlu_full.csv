@@ -1,0 +1,58 @@
+category,subject,StablePrompt-PPO,RAE_s1,RAE_s2,RAE_s3,RAE_mean,RAE_std
+STEM,Abstract Algebra,32.00,35.00,33.00,34.00,34.00,1.00
+STEM,Anatomy,54.81,54.07,54.81,51.11,53.33,1.96
+STEM,Astronomy,64.47,61.18,60.53,50.66,57.46,5.90
+STEM,College Biology,64.58,65.97,64.58,56.94,62.50,4.86
+STEM,College Chemistry,43.00,42.00,36.00,49.00,42.33,6.51
+STEM,College Computer Science,40.00,39.00,41.00,36.00,38.67,2.52
+STEM,College Mathematics,34.00,37.00,32.00,33.00,34.00,2.65
+STEM,College Physics,36.27,34.31,34.31,29.41,32.68,2.83
+STEM,Computer Security,67.00,63.00,69.00,67.00,66.33,3.06
+STEM,Conceptual Physics,49.36,48.51,51.49,50.21,50.07,1.49
+STEM,Electrical Engineering,53.10,48.97,51.72,53.79,51.49,2.42
+STEM,Elementary Mathematics,39.15,39.95,40.48,38.62,39.68,0.96
+STEM,High School Biology,71.94,72.58,71.61,72.58,72.26,0.56
+STEM,High School Chemistry,49.26,48.77,44.83,52.22,48.61,3.70
+STEM,High School Computer Science,55.00,57.00,57.00,51.00,55.00,3.46
+STEM,High School Mathematics,34.81,30.74,30.74,34.81,32.10,2.35
+STEM,High School Physics,32.45,33.11,31.13,35.10,33.11,1.99
+STEM,High School Statistics,45.83,37.96,37.50,49.54,41.67,6.82
+STEM,Machine Learning,41.07,35.71,38.39,43.75,39.28,4.09
+Social Science,Econometrics,32.46,27.19,31.58,30.70,29.82,2.32
+Social Science,High School Geography,73.74,66.16,64.65,67.17,65.99,1.27
+Social Science,High School Gov. \& Politics,77.72,77.20,76.68,63.21,72.36,7.93
+Social Science,High School Macroeconomics,58.97,54.36,55.90,58.72,56.33,2.21
+Social Science,High School Microeconomics,63.03,60.50,57.14,68.07,61.90,5.60
+Social Science,High School Psychology,75.78,73.94,72.48,69.91,72.11,2.04
+Social Science,Human Sexuality,64.89,66.41,67.18,51.15,61.58,9.04
+Social Science,Professional Psychology,54.11,54.58,53.92,50.82,53.11,2.01
+Social Science,Public Relations,55.67,63.64,66.36,60.91,63.64,2.73
+Social Science,Security Studies,50.20,51.43,53.06,54.29,52.93,1.43
+Social Science,Sociology,71.64,70.15,70.15,59.20,66.50,6.32
+Social Science,US Foreign Policy,73.00,67.00,72.00,77.00,72.00,5.00
+Humanities,Formal Logic,38.10,33.33,36.51,33.33,34.39,1.84
+Humanities,High School European History,68.48,64.24,63.64,66.67,64.85,1.60
+Humanities,High School US History,70.59,67.16,67.65,60.78,65.20,3.83
+Humanities,High School World History,75.00,74.68,74.26,71.73,73.56,1.60
+Humanities,International Law,71.07,63.64,67.77,66.12,65.84,2.08
+Humanities,Jurisprudence,56.48,57.41,54.63,56.48,56.17,1.42
+Humanities,Logical Fallacies,64.42,65.03,71.17,68.10,68.10,3.07
+Humanities,Moral Disputes,57.23,55.20,57.51,60.12,57.61,2.46
+Humanities,Moral Scenarios,30.50,30.61,27.04,28.83,28.83,1.79
+Humanities,Philosophy,57.23,55.95,57.88,58.84,57.56,1.47
+Humanities,Prehistory,58.95,60.19,55.87,60.19,58.75,2.49
+Humanities,Professional Law,38.98,40.22,38.79,41.07,40.03,1.15
+Humanities,World Religions,74.27,73.10,73.68,76.02,74.27,1.55
+Others,Business Ethics,55.00,55.00,55.00,52.00,54.00,1.73
+Others,Clinical Knowledge,62.26,56.98,60.75,52.08,56.60,4.35
+Others,College Medicine,58.96,52.02,54.34,47.98,51.45,3.22
+Others,Global Facts,36.00,39.00,37.00,35.00,37.00,2.00
+Others,Human Aging,58.30,53.81,56.05,56.05,55.30,1.29
+Others,Management,68.93,71.84,72.82,66.02,70.23,3.68
+Others,Marketing,84.19,80.77,80.77,76.92,79.49,2.22
+Others,Medical Genetics,56.00,54.00,53.00,54.00,53.67,0.58
+Others,Miscellaneous,72.80,73.30,71.14,62.96,69.13,5.45
+Others,Nutrition,61.11,64.38,62.75,58.82,61.98,2.86
+Others,Professional Accounting,55.72,40.07,39.36,41.13,40.19,0.89
+Others,Professional Medicine,44.33,46.69,44.85,51.47,47.67,3.42
+Others,Virology,53.61,48.19,48.19,47.59,47.99,0.35

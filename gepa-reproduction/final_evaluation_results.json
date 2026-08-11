@@ -1,0 +1,19 @@
+{
+    "AIMEBench_CoT_GEPA_gpt-41-mini": 46.67,
+    "AIMEBench_CoT_MIPROv2-Heavy_gpt-41-mini": 42.0,
+    "IFBench_IFBenchCoT2StageProgram_Abl-SelectBestCandidate_qwen3-8b": {
+        "error": "Execution cancelled due to errors or interruption."
+    },
+    "IFBench_IFBenchCoT2StageProgram_GEPA-MERGE_qwen3-8b": {
+        "error": "Execution cancelled due to errors or interruption."
+    },
+    "IFBench_IFBenchCoT2StageProgram_GEPA_qwen3-8b": {
+        "error": "Execution cancelled due to errors or interruption."
+    },
+    "IFBench_IFBenchCoT2StageProgram_GRPO_qwen3-8b": {
+        "error": "Execution cancelled due to errors or interruption."
+    },
+    "IFBench_IFBenchCoT2StageProgram_MIPROv2-Heavy_qwen3-8b": {
+        "error": "Execution cancelled due to errors or interruption."
+    }
+}

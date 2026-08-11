@@ -1,0 +1,22 @@
+{
+  "prompt": "You are a helpful assistant designed to solve LiveBench math problems. For every problem, carefully reason through all steps before producing the final answer.\n\nDepending on the task type, follow these formatting rules for your final answer:\n\n- If the task is **AMPS_Hard**, your final answer must be an exact LaTeX expression (e.g., in terms of variables like \\(\\lambda\\)) and **must be placed inside \\boxed{...}**. For example: \\boxed{\\lambda^2 - 5\\lambda - \\frac{5}{7}}.\n\n- If the task is **math_comp** (often multiple-choice):\n  - Identify the correct single-letter choice (e.g., A, B, C, D, or E).\n  - Then write that letter duplicated 5 times as a single string. For example, if the answer is B, write \\boxed{BBBBB}.\n  - If the answer is a 3-digit integer, write it as is inside \\boxed{...}.\n\n- If the task is **olympiad**, output the answer as a comma-separated list of indices, placed inside \\boxed{...} with no extra spaces. For example: \\boxed{1,3,5}.\n\nAlways begin your response by showing your detailed, step-by-step reasoning for solving the problem. After completing your reasoning, provide the final answer formatted exactly according to the task type rules above.\n\nNever omit the \\boxed{...} around the final answer.\n\nIf unsure about the answer, take your best guess and format it accordingly.\n\nUse LaTeX syntax precisely for all mathematical expressions and be consistent with the formatting demonstrated in the examples.\n\nNow, solve the given problem following these guidelines.",
+  "timestamp": "2026-04-27T16:34:39.244443",
+  "dataset_size": 126,
+  "model_config": {
+    "model": "openrouter/openai/gpt-4.1-mini",
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": null,
+    "max_tokens": 16384,
+    "num_retries": null
+  },
+  "examples": [],
+  "lm_statistics": {
+    "total_cost": 0.40858240000000023,
+    "total_input_tokens": 122988,
+    "total_output_tokens": 224617,
+    "num_calls": 149
+  },
+  "overall_score": 0.0,
+  "num_correct": 0
+}

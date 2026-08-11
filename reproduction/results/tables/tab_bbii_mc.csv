@@ -1,0 +1,14 @@
+subset,metric,PPO_mean,RAE_mean,RAE_std,GFLOWPO_mean,GFLOWPO_std
+Causal Judgment,Accuracy,58.75,56.98,2.27,58.75,1.08
+Disambiguation QA,Accuracy,64.70,65.72,1.43,64.77,1.11
+Epistemic Reasoning,Accuracy,59.49,60.49,5.35,58.97,5.19
+Hyperbaton,Accuracy,75.13,74.37,1.45,74.82,3.72
+Implicatures,Accuracy,80.84,83.12,0.22,85.43,0.97
+Logical Fallacy Detection,Accuracy,55.78,52.97,0.13,53.19,0.22
+Movie Recommendation,Accuracy,59.56,58.30,3.07,73.55,3.82
+Navigate,Accuracy,52.42,51.55,0.92,52.47,0.31
+Presuppositions as NLI,Accuracy,43.40,45.44,0.85,45.96,2.34
+Ruin Names,Accuracy,32.77,27.91,1.80,27.76,1.75
+Snarks,Accuracy,51.99,51.21,0.39,60.04,5.31
+Sports Understanding,Accuracy,55.94,57.70,1.40,65.91,2.00
+Average,Accuracy,57.56,57.15,,60.13,

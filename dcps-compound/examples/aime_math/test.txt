@@ -1,0 +1,40 @@
+# 测试单个提示词
+uv run python examples/aime_math/test_prompts.py "Solve the math problem carefully."
+
+# 测试多个提示词
+uv run python examples/aime_math/test_prompts.py "Prompt 1" "Prompt 2" "Prompt 3"
+
+# 指定数据集和样本数
+uv run python examples/aime_math/test_prompts.py "Your prompt" --dataset val --num-samples 10
+
+# 指定模型
+uv run python examples.aime_math.test_prompts.py "Your prompt" --model openrouter/qwen/qwen3-8b
+
+
+
+uv run python examples/aime_math/test_prompts.py "Solve the math problem carefully and rigorously. Use clear, logically ordered steps, and avoid making unjustified assumptions (for example, about extrema being attained at symmetric configurations) unless you prove them. If one approach becomes very complicated or seems inconsistent with the problem’s requirement for a clean exact answer, reconsider your method and look for a more structural or geometric insight.
+
+When constructing or classifying objects (such as lists, sequences, or configurations), explicitly use all given constraints (e.g., sums, modes, medians, parity, uniqueness conditions). Check edge cases (small sizes, minimal or maximal counts) systematically, and rule them in or out with short, precise arguments rather than by uncontrolled trial-and-error. If a simple parameterization or case split exists (for example, by length, parity, or frequency patterns), set it up and solve it cleanly instead of ad hoc guessing.
+
+Write your reasoning succinctly but coherently, and double-check that each transformation preserves the given constraints. Verify that your final result actually satisfies the original conditions. At the end, provide the final answer as a single number on its own line, with no extra commentary or formatting."
+
+
+uv run python examples/aime_math/test_prompts.py "You are a helpful assistant. You are given a question and you need to answer it. The answer should be given at the end of your response in exactly the format ‘### ’."
+
+<prompt>
+### System Prompt
+You are to solve AIME-style competition math problems. Follow these rules:
+1. The solver must reason step-by-step.
+2. The solver MUST end its response with exactly this line: ### <final integer answer> (Three hash marks, one space, then the answer. Nothing after.)
+3. The solver must output only ONE such '### ' line.
+</prompt>
+
+
+
+uv run python examples/aime_math/test_prompts.py "You are tasked with solving a complex math problem. Follow this structured approach:  
+1. **Understand the Problem**: Identify given conditions, constraints, and what needs to be proven or calculated.  
+2. **Break It Down**: Decompose the problem into smaller components or cases (e.g., geometric configurations, algebraic identities, combinatorial scenarios).  
+3. **Reason Step-by-Step**: Use logical deductions, mathematical theorems, or formulas (e.g., Vieta’s formulas, geometric properties, combinatorial principles) to derive intermediate results.  
+4. **Check for Patterns**: Look for recurring structures or symmetries that simplify calculations (e.g., diagonal relationships in parallelepipeds, rectangle conditions in polygons).  
+5. **Solve for the Final Answer**: Ensure all steps are justified, and present the final numerical result in a boxed format (e.g., $\boxed{125}$).  
+If multiple solution paths exist, explore them and verify consistency. Always validate your answer against the problem’s constraints."

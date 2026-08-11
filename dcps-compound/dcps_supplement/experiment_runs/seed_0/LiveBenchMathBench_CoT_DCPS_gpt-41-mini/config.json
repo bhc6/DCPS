@@ -1,0 +1,25 @@
+{
+  "benchmark_name": "LiveBenchMathBench",
+  "program_name": "CoT",
+  "optimizer_name": "DCPS",
+  "optimizer_description": "Demonstration-Conditioned Prompt Search (top-1 by validation, fair held-out test).",
+  "lm_name": "gpt-41-mini",
+  "lm_config": {
+    "model": "openrouter/openai/gpt-4.1-mini",
+    "api_base": "https://openrouter.ai/api/v1",
+    "api_key": "<REDACTED>",
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_tokens": 8192
+  },
+  "num_iterations": 20,
+  "num_fewshot": 3,
+  "top_k_prompts": 1,
+  "best_iteration": null,
+  "val_best_score_pct": 63.3,
+  "test_score_pct": 59.52,
+  "n_test_examples": 126,
+  "num_threads": 16,
+  "source": "paper Table 2(b); server run 'dynamic_fewshot_20iter_3shot' (NOT in clean_paper_data.csv snapshot)"
+}

@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Per-task RCEI breakdown. Cells marked ``--'' lack the required token data for that method/task.}
+\label{tab:app_rcei_pertask}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}llccrrrr@{}}
+\toprule
+& & & & \multicolumn{4}{c}{\textbf{Per-method RER\% / RCEI}} \\
+\cmidrule(lr){5-8}
+\textbf{Model} & \textbf{Task} & $\mathcal{B}$ & $T_\mathcal{B}$ (M-eq) & \textbf{MIPROv2-Heavy} & \textbf{GEPA-MERGE} & \textbf{GEPA} & \textbf{FSPO} \\ \midrule
+\multirow{6}{*}{GPT-4.1-mini} & HotpotQA & 36.10 & 1.419 & $+29.58$ / $+5.59$ & $+42.61$ / $+10.62$ & $\mathbf{+45.23}$ / $+9.61$ & $+35.84$ / $\mathbf{+14.34}$ \\
+ & IFBench & 48.13 & 1.197 & $+5.90$ / $+1.44$ & $+2.62$ / $+0.75$ & $+3.28$ / $+0.89$ & $\mathbf{+6.55}$ / $\mathbf{+2.95}$ \\
+ & Hover & 40.33 & 1.769 & $+11.73$ / $+2.75$ & $+14.53$ / $+3.26$ & $\mathbf{+15.65}$ / $+3.37$ & $+8.95$ / $\mathbf{+3.39}$ \\
+ & PUPA & 80.81 & 0.822 & $+14.49$ / $+3.53$ & $+66.23$ / $+16.22$ & $+48.41$ / $+11.50$ & $\mathbf{+69.20}$ / $\mathbf{+16.37}$ \\
+ & AIME-2025 & 40.00 & 0.350 & $+11.12$ / $+1.85$ & $+11.12$ / $+1.62$ & $\mathbf{+13.33}$ / $+1.92$ & $\mathbf{+13.33}$ / $\mathbf{+2.36}$ \\
+ & LiveBench-Math & 55.80 & 0.820 & $+3.39$ / $+0.79$ & $+12.08$ / $+2.95$ & $\mathbf{+19.03}$ / $\mathbf{+4.53}$ & $+8.42$ / $+2.48$ \\
+\bottomrule
+\multicolumn{8}{@{}p{1.05\textwidth}}{\footnotesize Macro RCEI ranking on the common subset: FSPO $+6.98$ $>$ GEPA-MERGE $+5.90$ $>$ GEPA $+5.30$ $>$ MIPROv2-Heavy $+2.66$.}\\
+\end{tabular}
+}
+\end{table}

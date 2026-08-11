@@ -1,0 +1,15 @@
+model_short,task,project,run_id,run_name,score_for_selection,runtime_mins,created_at,time_window_clean,overlap_count_same_model,overlap_run_ids,has_wandb_tokens,input_tokens,output_tokens,estimated_cost_usd,n_runs_in_cell,n_clean_windows_in_cell,n_wandb_token_runs_in_cell
+GPT-4.1-mini,AIME-2025,aime-math-dynamic-fewshot,13xynbot,dynamic_fewshot_gpt41mini_20iter_3shot,0.5,234.58,2026-05-01T20:33:27Z,True,0,,False,,,,2,2,0
+GPT-4.1-mini,HotpotQA,hotpotqa-dynamic-fewshot,89wk61np,hotpot_gpt_subset50_20iter,59.0,137.1,2026-05-15T04:45:06Z,True,0,,False,,,,1,1,0
+GPT-4.1-mini,Hover,hover-dynamic-fewshot,wqp8lojs,dynamic_fewshot_gpt41mini_20iter_3shot,0.4567,31.48,2026-05-03T12:16:48Z,True,0,,False,,,,1,1,0
+GPT-4.1-mini,IFBench,ifbench-dynamic-fewshot,w5dkndzl,dynamic_fewshot_gpt41mini_20iter_3shot,0.7585,60.52,2026-05-02T03:20:08Z,True,0,,False,,,,3,3,0
+GPT-4.1-mini,LiveBench-Math,livebench-math-dynamic-fewshot,h6lucked,dynamic_fewshot_20iter_3shot,0.2698,57.83,2026-05-01T18:49:05Z,True,0,,False,,,,3,1,0
+GPT-4.1-mini,PUPA,pupa-dynamic-fewshot-origin,p16uyuga,pupa_gpt_nobase_subset45_20iter,94.09,60.22,2026-05-14T13:18:10Z,True,0,,True,6325719.0,2018796.0,5.7603612,1,1,1
+GPT-4o-mini,HotpotQA,hotpotqa-dynamic-fewshot,ssdrk8c5,hotpot_gpt_subset50_20iter,29.67,33.97,2026-05-15T02:38:47Z,True,0,,False,,,,1,1,0
+GPT-4o-mini,PUPA,pupa-dynamic-fewshot-origin,lxu11kps,pupa_gpt_nobase_subset45_20iter,87.77,36.5,2026-05-14T12:31:29Z,False,1,8w0rp3f1,False,,,,2,0,1
+Qwen3-8B,AIME-2025,aime-math-dynamic-fewshot,vwwcv2b0,dynamic_fewshot_20iter_3shot,0.5533,2778.1,2026-04-30T13:10:58Z,False,2,9ogkl1i5;7jl5dta0,False,,,,5,1,0
+Qwen3-8B,HotpotQA,hotpotqa-dynamic-fewshot,trvbqp3c,hotpot_qwen_subset50_20iter,61.33,223.68,2026-05-14T15:29:08Z,True,0,,False,,,,1,1,0
+Qwen3-8B,Hover,hover-dynamic-fewshot,aa8u5puv,dynamic_fewshot_qwen3_8b_20iter_3shot,0.44,71.55,2026-05-03T12:48:57Z,False,1,bfmewlrg,False,,,,1,0,0
+Qwen3-8B,IFBench,ifbench-dynamic-fewshot,9ogkl1i5,dynamic_fewshot_qwen3_8b_20iter_3shot,0.7193999999999999,260.05,2026-05-02T03:20:08Z,False,1,vwwcv2b0,False,,,,4,0,0
+Qwen3-8B,LiveBench-Math,livebench-math-dynamic-fewshot,b6iz2dax,dynamic_fewshot_20iter_3shot,0.6667000000000001,420.5,2026-04-25T03:33:40Z,True,0,,False,,,,9,3,0
+Qwen3-8B,PUPA,pupa-dynamic-fewshot-origin,n7o1crf6,pupa_qwen_nobase_subset45_20iter,90.02,133.2,2026-05-14T09:18:11Z,False,2,3y0tizlv;tituojj7,False,,,,3,0,0

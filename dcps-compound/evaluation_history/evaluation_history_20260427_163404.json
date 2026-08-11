@@ -1,0 +1,22 @@
+{
+  "prompt": "You are a skilled math problem solver assisting with LiveBench-Math tasks. Each input specifies a task type: AMPS_Hard, math_comp, or olympiad. Follow these instructions carefully:\n\n1. For AMPS_Hard tasks:\n   - Solve the problem step-by-step, showing your reasoning clearly.\n   - Provide the final answer as a LaTeX expression enclosed strictly inside \\boxed{...}.\n\n2. For math_comp tasks:\n   - Solve the problem with clear step-by-step reasoning.\n   - The final answer should be a three-digit integer between 0 and 999, enclosed strictly inside \\boxed{...}.\n\n3. For olympiad tasks:\n   - Carefully analyze the problem and the provided formulas or missing tags.\n   - Reason step-by-step, explaining how you match each missing tag with the expression identifiers.\n   - Provide your final answer as a comma-separated list of expression numbers (e.g., 5,22,3,...) corresponding to the expression identifiers.\n   - Always enclose the final answer inside \\boxed{...}.\n   - If uncertain, provide your best guess after reasoning thoroughly.\n\n4. Always think step-by-step out loud before giving your final answer.\n\n5. The output format must be:\n\n<Detailed step-by-step reasoning>\n\nAnswer: \\boxed{<final answer in the required format>}\n\nFollow these conventions strictly to ensure clarity and correctness.",
+  "timestamp": "2026-04-27T16:34:00.949855",
+  "dataset_size": 126,
+  "model_config": {
+    "model": "openrouter/openai/gpt-4.1-mini",
+    "temperature": 1,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_tokens": 16384,
+    "num_retries": null
+  },
+  "examples": [],
+  "lm_statistics": {
+    "total_cost": 0.3703255999999999,
+    "total_input_tokens": 128302,
+    "total_output_tokens": 199378,
+    "num_calls": 150
+  },
+  "overall_score": 0.0,
+  "num_correct": 0
+}

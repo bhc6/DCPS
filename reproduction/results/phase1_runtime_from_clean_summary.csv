@@ -1,0 +1,6 @@
+"method","epochs","n","mean_mins","median_mins","total_hours"
+"StablePrompt-PPO","30.0","117","11.42","7.17","22.28"
+"AlgPrompt","30.0","305","9.08","6.33","46.18"
+"StablePrompt-PPO","100.0","24","36.86","37.57","14.74"
+"StablePrompt-PPO","200.0","24","72.32","73.6","28.93"
+"AlgPrompt","100.0","4","39.29","39.03","2.62"

@@ -1,0 +1,15 @@
+\begin{table}[htbp]
+\centering
+\caption{Supplemental StablePrompt-PPO A100 runtime by Main Results task-family granularity. Rows include non-GFB Gemma1.1-7B A100 rows mapped to StablePrompt-PPO, including raw AlgPrompt-labelled rows; GFB is never treated as PPO in the paper mapping. Parallel repeated runs are first averaged within each subset, then summed across subsets to estimate one family sweep.}
+\label{tab:app_phase1_ppo_runtime}
+\begin{tabular}{@{}llccrr@{}}
+\toprule
+\textbf{Method} & \textbf{Task Family} & \textbf{GPU} & \textbf{Epochs} & \textbf{Family sweep (h)} & \textbf{Mean min/subset} \\ \midrule
+StablePrompt-PPO & GLUE/SuperGLUE & A100 & 100 & 3.97 & 39.74 \\
+StablePrompt-PPO & BBII-MC & A100 & 30 & 3.17 & 17.30 \\
+StablePrompt-PPO & BBII-Gen & A100 & 30 & 1.84 & 18.35 \\
+StablePrompt-PPO & II & A100 & 30 & 6.65 & 16.62 \\
+StablePrompt-PPO & MMLU & A100 & 30 & 6.38 & 6.71 \\
+\bottomrule
+\end{tabular}
+\end{table}

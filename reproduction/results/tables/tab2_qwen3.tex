@@ -1,0 +1,20 @@
+\begin{table}[ht]
+\centering
+\caption{Qwen3-8B cross-benchmark comparison of prompt-optimization methods (top) and total optimization budget in rollouts (bottom). Per-column best in \textbf{bold}; macro-average is the unweighted mean across the six benchmarks.}
+\label{tab:qwen_results}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+\textbf{Method} & \textbf{HotpotQA} & \textbf{IFBench} & \textbf{Hover} & \textbf{PUPA} & \textbf{AIME-2025} & \textbf{LiveBench-Math} & \textbf{Macro-Avg} \\ \midrule
+Baseline      & 40.33 & 38.61 & 33.67 & 81.55 & 47.33 & 65.01 & 51.08 \\
+MIPROv2-Heavy & 58.67 & 38.61 & 44.00 & 78.67 & 58.00 & 67.46 & 57.57 \\
+GEPA          & \textbf{63.33} & 40.65 & \textbf{53.33} & 87.57 & 59.33 & \textbf{70.57} & \textbf{62.46} \\
+GEPA+Merge    & 61.33 & 29.08 & 52.00 & 84.81 & \textbf{62.67} & 66.28 & 59.36 \\
+DCPS-Compound & 61.33 & \textbf{43.88} & 44.00 & \textbf{90.02} & 55.33 & 65.08 & 59.94 \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Total optimization budget (\# rollouts)}} \\
+GEPA (+Merge) / MIPROv2-Heavy & 6871 & 3593 & 7051 & 2426 & 1839 & 1839 & 3936 \\
+DCPS-Compound & 1020 & 620  & 620  & 920  & 320  & 620  & 687  \\
+\bottomrule
+\end{tabular}}
+\end{table}

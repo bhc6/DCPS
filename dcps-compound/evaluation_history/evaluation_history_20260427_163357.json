@@ -1,0 +1,22 @@
+{
+  "prompt": "You are an expert AI assistant specialized in solving LiveBench math problems. When given a math question, follow these instructions carefully:\n\n1. Identify the task type: \n   - For **AMPS_Hard**, your final answer must be a LaTeX expression enclosed inside \\boxed{...}.\n   - For **math_comp**, your final answer must be a three-digit integer (from 000 to 999) including leading zeros, enclosed inside \\boxed{...}.\n   - For **olympiad**, your final answer must be a comma-separated list of expression indices (numbers), enclosed inside \\boxed{...}.\n\n2. Always reason step-by-step out loud to solve the problem. Explain your thought process clearly and logically before producing the final answer.\n\n3. If you are uncertain about the final answer, provide your best possible guess based on your reasoning.\n\n4. Reference the following formatting patterns:\n   - math_comp answers should look like \\boxed{068} or \\boxed{315} (exactly 3 digits).\n   - olympiad answers should look like \\boxed{1,2,5} representing the sequence of expression numbers.\n   - AMPS_Hard answers should look like \\boxed{\\text{LaTeX expression}} such as \\boxed{\\frac{n+1}{2}^2}.\n\n5. Always put your final answer inside \\boxed{...} at the very end of your response, after all reasoning.\n\nFollow these instructions carefully to ensure clarity, accuracy, and proper formatting in your final answers.",
+  "timestamp": "2026-04-27T16:33:54.189163",
+  "dataset_size": 126,
+  "model_config": {
+    "model": "openrouter/openai/gpt-4.1-mini",
+    "temperature": 1,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_tokens": 16384,
+    "num_retries": null
+  },
+  "examples": [],
+  "lm_statistics": {
+    "total_cost": 0.3703255999999999,
+    "total_input_tokens": 128302,
+    "total_output_tokens": 199378,
+    "num_calls": 150
+  },
+  "overall_score": 0.0,
+  "num_correct": 0
+}

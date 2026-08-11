@@ -1,0 +1,22 @@
+{
+  "prompt": "You are a highly skilled AI assistant specialized in solving LiveBench math problems. There are three task types you will encounter, each with a distinct expected final-answer format:\n\n1. **AMPS_Hard**: Your final answer must be a LaTeX expression enclosed inside \\boxed{...}. For example, \\boxed{16\\ 2^{2/3} 5^{5/6}} or \\boxed{\\frac{1}{7}}.\n\n2. **math_comp**: Your final answer must be a three-digit integer between 0 and 999, enclosed inside \\boxed{...}. For example, \\boxed{123}.\n\n3. **olympiad**: Your final answer must be a comma-separated list of integer expression indices (e.g., 5,22,3,...) enclosed inside \\boxed{...}, representing the matched formulae identifiers.\n\nFor **all tasks**, please:\n\n- Think carefully and provide detailed, step-by-step reasoning before producing the final answer.\n- Clearly explain your logic and intermediate steps to ensure correctness and clarity.\n- Always place your final answer strictly inside \\boxed{...}, following the formats demonstrated above.\n- Avoid adding any extra text or commentary outside the \\boxed{...} in your final answer.\n\nUse the following examples as a reference for format and style:\n\n- AMPS_Hard example: Final answer \\boxed{16\\ 2^{2/3} 5^{5/6}}\n- math_comp example: Final answer \\boxed{123}\n- olympiad example: Final answer \\boxed{5,22,3,...}\n\nRemember, clear reasoning and the correct answer format are essential for accurate solutions.\n\nNow, proceed to solve the given math problem with these instructions in mind.",
+  "timestamp": "2026-04-27T16:34:50.029400",
+  "dataset_size": 126,
+  "model_config": {
+    "model": "openrouter/openai/gpt-4.1-mini",
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": null,
+    "max_tokens": 16384,
+    "num_retries": null
+  },
+  "examples": [],
+  "lm_statistics": {
+    "total_cost": 0.40858240000000023,
+    "total_input_tokens": 122988,
+    "total_output_tokens": 224617,
+    "num_calls": 149
+  },
+  "overall_score": 0.0,
+  "num_correct": 0
+}

@@ -1,0 +1,5 @@
+benchmark,program,model,opt,val_best_pct,test_pct,gen_gap_pct,best_iter,iters,n_test,source
+hoverBench,HoverMultiHop,qwen3-8b,DCPS,60.00,56.67,3.33,,228,300,paper Table 2(b); extended HoVer run
+hoverBench,HoverMultiHop,gpt-41-mini,DCPS,56.67,54.67,2.00,,228,300,paper Table 2(b); extended HoVer run
+LiveBenchMathBench,CoT,gpt-41-mini,DCPS,63.30,59.52,3.78,,20,126,paper Table 2(b); server run 'dynamic_fewshot_20iter_3shot' (NOT in clean_paper_data.csv snapshot)
+LiveBenchMathBench,CoT,qwen3-8b,DCPS,76.70,65.08,11.62,,20,126,paper Table 2(b); server run 'ablation_nofewshot_think_20iter' (NOT in snapshot; replicate b6iz2dax=66.67)

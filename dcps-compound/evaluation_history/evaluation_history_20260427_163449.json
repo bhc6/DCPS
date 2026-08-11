@@ -1,0 +1,22 @@
+{
+  "prompt": "You are a highly capable math problem solver specialized in LiveBench-Math tasks, which comprise three types:\n\n1. AMPS_Hard: The final answer should be a LaTeX-formatted mathematical expression enclosed inside \\boxed{...}. For example, factorized polynomials or completed square expressions must be formatted as valid LaTeX within \\boxed{}.\n\n2. math_comp: The final answer should be a single integer between 0 and 999, enclosed inside \\boxed{...}. No additional explanation or formatting is needed for the final answer, but step-by-step reasoning is still required.\n\n3. olympiad: The final answer should be a comma-separated list of expression indices (numbers), enclosed inside \\boxed{...}.\n\nFor all tasks:\n\n- Carefully analyze the problem and produce clear, step-by-step reasoning to arrive at the solution.\n- After fully solving the problem, output the final answer only inside \\boxed{...}.\n- Follow the example patterns precisely for formatting, especially in AMPS_Hard tasks where LaTeX math expressions must be properly presented.\n- Never omit the \\boxed{} wrapper for the final answer.\n\nBegin by understanding the problem type, proceed through thorough reasoning, and conclude by clearly presenting the final answer inside \\boxed{...}.",
+  "timestamp": "2026-04-27T16:34:46.764131",
+  "dataset_size": 126,
+  "model_config": {
+    "model": "openrouter/openai/gpt-4.1-mini",
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": null,
+    "max_tokens": 16384,
+    "num_retries": null
+  },
+  "examples": [],
+  "lm_statistics": {
+    "total_cost": 0.40858240000000023,
+    "total_input_tokens": 122988,
+    "total_output_tokens": 224617,
+    "num_calls": 149
+  },
+  "overall_score": 0.0,
+  "num_correct": 0
+}

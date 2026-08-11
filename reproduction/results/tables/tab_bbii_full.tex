@@ -1,0 +1,39 @@
+\begin{table}[htbp]
+\centering
+\caption{Per-subset BBII results on Gemma1.1-7B. PPO is the merged value of audited CSV runs and the latest experimental run. RAE values are reported per GFB seed (6, 42, 3) and as mean$\pm$std across the three seeds. GFLOWPO is reported as mean$\pm$std.}
+\label{tab:bbii_full}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}llccccccc@{}}
+\toprule
+\textbf{Subset} & \textbf{Metric} & \textbf{PPO} & \textbf{RAE\_s6} & \textbf{RAE\_s42} & \textbf{RAE\_s3} & \textbf{RAE (mean$\pm$std)} & \textbf{GFLOWPO (mean$\pm$std)} \\ \midrule
+\multicolumn{8}{l}{\textit{BBII-MC}} \\
+causal judgment & Accuracy & 58.75 & 58.13 & 58.44 & 54.37 & 56.98$\pm$2.27 & 58.75$\pm$1.08 \\
+disambiguation qa & Accuracy & 64.70 & 67.11 & 64.25 & 65.79 & 65.72$\pm$1.43 & 64.77$\pm$1.11 \\
+epistemic reasoning & Accuracy & 59.49 & 54.31 & 63.65 & 63.50 & 60.49$\pm$5.35 & 58.97$\pm$5.19 \\
+hyperbaton & Accuracy & 75.13 & 72.79 & 75.63 & 74.68 & 74.37$\pm$1.45 & 74.82$\pm$3.72 \\
+implicatures & Accuracy & 80.84 & 83.12 & 83.33 & 82.90 & 83.12$\pm$0.22 & 85.43$\pm$0.97 \\
+logical fallacy detection & Accuracy & 55.78 & 52.85 & 53.10 & 52.96 & 52.97$\pm$0.13 & 53.19$\pm$0.22 \\
+movie recommendation & Accuracy & 59.56 & 57.45 & 55.74 & 61.70 & 58.30$\pm$3.07 & 73.55$\pm$3.82 \\
+navigate & Accuracy & 52.42 & 51.24 & 52.58 & 50.82 & 51.55$\pm$0.92 & 52.47$\pm$0.31 \\
+presuppositions as nli & Accuracy & 43.40 & 45.53 & 44.54 & 46.24 & 45.44$\pm$0.85 & 45.96$\pm$2.34 \\
+ruin names & Accuracy & 32.77 & 25.84 & 28.95 & 28.95 & 27.91$\pm$1.80 & 27.76$\pm$1.75 \\
+snarks & Accuracy & 51.99 & 51.66 & 50.99 & 50.99 & 51.21$\pm$0.39 & 60.04$\pm$5.31 \\
+sports understanding & Accuracy & 55.94 & 58.56 & 56.08 & 58.45 & 57.70$\pm$1.40 & 65.91$\pm$2.00 \\
+\midrule
+\textbf{BBII-MC (Avg)} & -- & \textbf{57.56} & 56.55 & 57.28 & 57.61 & \textbf{57.15} & \textbf{60.13} \\
+\midrule
+\multicolumn{8}{l}{\textit{BBII-Gen}} \\
+dyck languages & Exact Match & 0.00 & 0.00 & 0.00 & 0.00 & 0.00$\pm$0.00 & 0.00$\pm$0.00 \\
+gender inclusive sentences german & Exact Match & 90.39 & 84.70 & 87.81 & 89.74 & 87.42$\pm$2.54 & 90.44$\pm$0.68 \\
+object counting & Exact Match & 32.86 & 35.67 & 34.43 & 33.96 & 34.69$\pm$0.88 & 38.18$\pm$2.78 \\
+operators & Exact Match & 57.15 & 52.03 & 48.62 & 50.72 & 50.46$\pm$1.72 & 53.52$\pm$4.01 \\
+tense & Exact Match & 99.22 & 94.22 & 97.19 & 96.33 & 95.91$\pm$1.53 & 96.28$\pm$0.71 \\
+word sorting & Exact Match & 98.21 & 94.20 & 93.97 & 98.32 & 95.50$\pm$2.45 & 95.55$\pm$3.56 \\
+\midrule
+\textbf{BBII-Gen (Avg)} & -- & \textbf{62.97} & 60.14 & 60.34 & 61.51 & \textbf{60.66} & \textbf{62.33} \\
+\midrule
+\textbf{BBII-ALL (Avg, 18 subsets)} & -- & \textbf{59.37} & 57.76 & 58.29 & 58.91 & \textbf{58.32} & \textbf{60.87} \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

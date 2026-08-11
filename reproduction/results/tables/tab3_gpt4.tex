@@ -1,0 +1,20 @@
+\begin{table}[ht]
+\centering
+\caption{GPT-4.1-mini cross-benchmark comparison of prompt-optimization methods (top) and total optimization budget in rollouts (bottom). Per-column best in \textbf{bold}; macro-average is the unweighted mean across the six benchmarks.}
+\label{tab:gpt4_results}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+\textbf{Method} & \textbf{HotpotQA} & \textbf{IFBench} & \textbf{Hover} & \textbf{PUPA} & \textbf{AIME-2025} & \textbf{LiveBench-Math} & \textbf{Macro-Avg} \\ \midrule
+Baseline      & 36.10 & 48.13 & 40.33 & 80.81 & 40.00 & 55.80 & 50.20 \\
+MIPROv2-Heavy & 55.00 & 51.19 & 47.33 & 83.59 & 46.67 & 57.30 & 56.85 \\
+GEPA          & \textbf{65.00} & 49.83 & \textbf{49.67} & 90.10 & \textbf{48.00} & \textbf{64.21} & \textbf{61.14} \\
+GEPA+Merge    & 63.33 & 49.49 & 49.00 & 93.52 & 46.67 & 61.14 & 60.53 \\
+DCPS-Compound & 59.00 & \textbf{51.53} & 45.67 & \textbf{94.09} & \textbf{48.00} & 59.52 & 59.64 \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Total optimization budget (\# rollouts)}} \\
+GEPA (+Merge) / MIPROv2-Heavy & 6871 & 3593 & 7051 & 2426 & 1839 & 1839 & 3936 \\
+DCPS-Compound & 1020 & 620  & 620  & 920  & 320  & 620  & 687  \\
+\bottomrule
+\end{tabular}}
+\end{table}

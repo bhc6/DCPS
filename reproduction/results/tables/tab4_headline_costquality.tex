@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\caption{Global overhead and Compute-Anchored RCEI of prompt-optimization methods. Left: Average rollout budget and API cost across all tasks. Right: RCEI cost-efficiency metrics relative to the unoptimized prompt ($\mathcal{B}$) evaluated on the 7-task common subset with complete token data (cost axis $T=T_{\text{in}}+4T_{\text{out}}$: Qwen3-8B~$\times$~LiveBench-Math and GPT-4.1-mini~$\times$~\{HotpotQA, IFBench, Hover, PUPA, AIME-2025, LiveBench-Math\}).}
+\label{tab:headline_costquality}
+\label{tab:rcei}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+\multirow{2}{*}{\textbf{Method ($\mathcal{M}$)}} & \multicolumn{2}{c}{\textbf{Global Overhead Summary}} & \multicolumn{4}{c}{\textbf{7-Task Common Subset RCEI Analysis}} \\ \cmidrule(lr){2-3} \cmidrule(lr){4-7}
+ & \textbf{Avg. Rollouts} & \textbf{Avg. Cost (USD)} & \textbf{Macro RER} & \textbf{$T_\mathcal{M}$ (M-eq)} & \textbf{$\log_2(T_\mathcal{M}/T_\mathcal{B})$} & \textbf{Macro RCEI} \\ \midrule
+Baseline (unoptimized prompt, $\mathcal{B}$) & -- & \$0.70 & $0$ & $1.18$ & $0$ & -- \\
+MIPROv2-Heavy & $3{,}936$ & \$12.62 & $+11.89\%$ & $28.26$ & $4.61$ & $+2.52$ \\
+GEPA & $3{,}936$ & \$15.89 & $\mathbf{+22.97\%}$ & $30.49$ & $4.70$ & $+5.05$ \\
+GEPA-MERGE & $3{,}936$ & \$15.23 & $+21.83\%$ & $26.91$ & $4.51$ & $+5.17$ \\
+\textbf{DCPS-Compound} & $\mathbf{687}$ & $\mathbf{\$3.53}$ & $+20.36\%$ & $\mathbf{15.84}$ & $\mathbf{3.60}$ & $\mathbf{+5.99}$ \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

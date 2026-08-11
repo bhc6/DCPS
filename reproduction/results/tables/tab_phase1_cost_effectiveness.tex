@@ -1,0 +1,19 @@
+\begin{table}[h]
+\centering
+\caption{StablePrompt ablation cost-effectiveness at a glance. Accuracy evidence comes from Table~\ref{tab:gemma_ablation}. Estimated USD uses representative cloud rates (A100 $\approx$ \$1.50/hr, A40 $\approx$ \$0.40/hr).}
+\label{tab:phase1_cost_effectiveness}
+\resizebox{\textwidth}{!}{%
+\setlength{\tabcolsep}{5pt}%
+\begin{tabular}{@{}llccccl@{}}
+\toprule
+\textbf{Family} & \textbf{$\Delta$ (PPO$-$RAE)} & \textbf{RAE time} & \textbf{RAE cost} & \textbf{PPO time} & \textbf{PPO cost} & \textbf{Reading} \\ \midrule
+GLUE/SuperGLUE & $-0.4$~pp (n.s.) & $4.83$~h & \textbf{\$1.93} & $3.97$~h & \$5.96 & Same accuracy, $3.1\times$ cheaper \\
+BBII-MC        & $+0.4$~pp (n.s.) & $3.38$~h & \textbf{\$1.35} & $3.17$~h & \$4.76 & Same accuracy, $3.5\times$ cheaper \\
+BBII-Gen       & $+2.3$~pp        & $2.66$~h & \textbf{\$1.06} & $1.84$~h & \$2.76 & Small PPO gain at $2.6\times$ cost \\
+MMLU           & $+1.8$~pp        & $6.58$~h & \textbf{\$2.63} & $6.38$~h & \$9.57 & Small PPO gain at $3.6\times$ cost \\
+II (30~ep)     & $+4.4$~pp        & $2.76$~h & \textbf{\$1.10} & $6.65$~h & \$9.98 & PPO leads under default budget \\
+II (100~ep)    & $+0.1$~pp        & $14.74$~h & \$5.90 & --      & --     & RAE matches PPO (\$5.90 vs.\ \$9.98) \\
+II (200~ep)    & $-0.4$~pp        & $28.93$~h & \$11.57 & --     & --     & RAE surpasses PPO \\ \bottomrule
+\end{tabular}%
+}
+\end{table}

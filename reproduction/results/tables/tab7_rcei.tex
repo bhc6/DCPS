@@ -1,0 +1,18 @@
+\begin{table}[h]
+\centering
+\caption{Compute-Anchored RCEI of prompt-optimization methods relative to the unoptimized baseline ($\mathcal{B}$). Cost axis: $T=T_{\text{in}}+4T_{\text{out}}$ (optimizer + test tokens). Macro values are means across the GPT-4.1-mini 6-task subset: \{HotpotQA, IFBench, Hover, PUPA, AIME-2025, LiveBench-Math\}.}
+\label{tab:rcei}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Method ($\mathcal{M}$)} & \textbf{Macro Score} & \textbf{Macro RER} & \textbf{$T_\mathcal{M}$ (M-eq)} & \textbf{$\overline{\log_2(T_\mathcal{M}/T_\mathcal{B})}$} & \textbf{Macro RCEI} \\ \midrule
+Baseline ($\mathcal{B}$, unoptimized) & $50.20$ & $0$ & $1.06$ & $0$ & -- \\
+MIPROv2-Heavy & $56.85$ & $+12.70\%$ & $27.11$ & $4.67$ & $+2.66$ \\
+GEPA & $\mathbf{61.13}$ & $+24.15\%$ & $28.36$ & $4.73$ & $+5.30$ \\
+GEPA-MERGE & $60.52$ & $\mathbf{+24.87\%}$ & $24.07$ & $4.50$ & $+5.90$ \\
+FSPO & $59.63$ & $+23.72\%$ & $\mathbf{11.03}$ & $\mathbf{3.44}$ & $\mathbf{+6.98}$ \\
+\bottomrule
+\multicolumn{6}{@{}l}{\footnotesize Per-task breakdown in Table~\ref{tab:app_rcei_pertask}.}\\
+\end{tabular}
+}
+\end{table}

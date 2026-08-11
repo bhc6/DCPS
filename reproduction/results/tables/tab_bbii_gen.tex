@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\caption{Detailed Ablation Results on BBII-Gen (Exact Match, 6 subsets) on Gemma1.1-7B. StablePrompt-PPO is the merged value across audited and latest runs; StablePrompt-RAE is reported as mean$\pm$std across 3 seeds; GFLOWPO is reported as mean$\pm$std.}
+\label{tab:app_bbii_gen}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Subset} & \textbf{Metric} & \textbf{StablePrompt-PPO} & \textbf{StablePrompt-RAE (3 seeds)} & \textbf{GFLOWPO} \\ \midrule
+Dyck Languages & Exact Match & 0.0 & 0.0$\pm$0.0 & 0.0$\pm$0.0 \\
+Gender Inclusive Sentences (German) & Exact Match & 90.4 & 87.4$\pm$2.5 & 90.4$\pm$0.7 \\
+Object Counting & Exact Match & 32.9 & 34.7$\pm$0.9 & 38.2$\pm$2.8 \\
+Operators & Exact Match & 57.1 & 50.5$\pm$1.7 & 53.5$\pm$4.0 \\
+Tense & Exact Match & 99.2 & 95.9$\pm$1.5 & 96.3$\pm$0.7 \\
+Word Sorting & Exact Match & 98.2 & 95.5$\pm$2.4 & 95.5$\pm$3.6 \\
+\midrule
+\textbf{Average} & -- & \textbf{63.0} & \textbf{60.7} & \textbf{62.3} \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

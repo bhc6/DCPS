@@ -1,0 +1,21 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Sensitive / oversized data — MUST NOT be published.
+# openrouter_activity_*.csv is request-level billing/usage data (83MB) and is
+# also currently committed in git history — see PUBLISH_CHECKLIST for scrubbing.
+openrouter_activity_*.csv
+# Per-request OpenRouter match intermediates derived from the billing export.
+results/fspo_openrouter_*.csv
+# Secrets
+.env
+*.key
+wandb/

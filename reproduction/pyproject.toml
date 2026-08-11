@@ -1,0 +1,32 @@
+[project]
+name = "dcps-reproduction"
+version = "0.1.0"
+description = "Analysis and reproduction pipeline for 'Simplicity Goes Far: Auditing Prompt Optimizers with Demonstration-Conditioned Prompt Search'"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.10.9",
+    "pandas>=3.0.3",
+    "scipy>=1.17.1",
+    "seaborn>=0.13.2",
+    "tqdm>=4.67.3",
+]
+
+[project.optional-dependencies]
+# wandb is only needed to REGENERATE the frozen snapshot (results/fetch_wandb_data.py).
+# Reproducing the paper's tables/figures uses the shipped raw_wandb_data.csv and
+# needs none of this. Install with:  pip install -e ".[wandb]"
+wandb = [
+    "wandb>=0.27.0",
+]
+
+# The analysis scripts under results/ are run directly, not imported as a package.
+# Declaring no modules keeps `pip install -e .` valid (it installs the dependency set
+# only) instead of failing setuptools auto-discovery on this multi-directory tree.
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []

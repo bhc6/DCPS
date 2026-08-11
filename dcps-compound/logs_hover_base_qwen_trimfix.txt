@@ -1,0 +1,8 @@
+Loading HoVer datasets (artifact-aligned 3-hop split)...
+Dataset sizes - Train: 150, Val: 300, Test: 300
+resource module not available on Windows
+Original baseline instructions (DSPy ChainOfThought defaults):
+  summarize1: Given the fields `claim`, `passages`, produce the fields `summary`.
+  create_query_hop2: Given the fields `claim`, `summary_1`, produce the fields `query`.
+  summarize2: Given the fields `claim`, `context`, `passages`, produce the fields `summary`.
+  create_query_hop3: Given the fields `claim`, `summary_1`, `summary_2`, produce the fields `query`.

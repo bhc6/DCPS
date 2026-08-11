@@ -1,0 +1,5 @@
+"paper_method","epochs","gpu","n","n_datasets","mean_mins","median_mins","total_hours"
+"StablePrompt-PPO","100.0","A40","10","6","41.83","37.47","6.97"
+"StablePrompt-RAE","100.0","A40","72","30","43.77","37.47","52.53"
+"StablePrompt-RAE","200.0","A40","24","24","72.32","73.6","28.93"
+"StablePrompt-RAE","30.0","A40","680","101","7.27","5.32","82.38"

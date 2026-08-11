@@ -1,0 +1,49 @@
+\begin{landscape}
+\begin{table}[htbp]
+\centering
+\caption{Full DCPS-Compound token-recovery audit table for all non-GPT-4o-mini runs. This table is intentionally inclusive: it lists clean, mixed-key, and overlapping OpenRouter/WandB matches so that the reader can judge which rows to trust. OpenRouter columns aggregate all requests in the run's model/time window; WandB columns are populated only when cumulative-token fields were found directly in run history.}
+\label{tab:app_fspo_full_token_recovery}
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llllllllrrrrrlll@{}}
+\toprule
+\textbf{Model} & \textbf{Task} & \textbf{Run} & \textbf{Name} & \textbf{Conf.} & \textbf{Top key} & \textbf{DCPS ov.} & \textbf{Non-DCPS ov.} & \textbf{Req.} & \textbf{OR In} & \textbf{OR Out} & \textbf{OR Cost} & \textbf{WB In} & \textbf{WB Out} & \textbf{WB Cost} & \textbf{Keys} \\ \midrule
+GPT-4.1-mini & AIME-2025 & mwjwwnoh & origin\_gpt\_nobase\_fixed15val\_64t\_20iter\_3shot\_top1 & B\_same\_task\_key\_mix & AIME\_MATH\_FEWSHOT & 0 & 0 & 909 & 2.21 & 3.65 & \$6.43 & -- & -- & -- & AIME\_MATH\_FEWSHOT:526 req,478141 in,2393076 out,\$4.0176; AIMEgpt4.1mini:383 r... \\
+GPT-4.1-mini & AIME-2025 & 13xynbot & dynamic\_fewshot\_gpt41mini\_20iter\_3shot & C\_overlap\_same\_model\_non\_fspo & AIME\_MATH\_GPT41MINI & 0 & 1 & 1600 & 1.10 & 7.05 & \$11.73 & -- & -- & -- & AIME\_MATH\_GPT41MINI:1600 req,1097885 in,7054658 out,\$11.7257 \\
+GPT-4.1-mini & HotpotQA & 89wk61np & hotpot\_gpt\_subset50\_20iter & A\_clean\_time\_model & project & 0 & 0 & 1083 & 0.82 & 0.19 & \$0.64 & -- & -- & -- & project:1083 req,824396 in,192609 out,\$0.6375 \\
+GPT-4.1-mini & Hover & wqp8lojs & dynamic\_fewshot\_gpt41mini\_20iter\_3shot & A\_clean\_time\_model & hover\_fs & 0 & 0 & 3612 & 3.09 & 1.25 & \$3.23 & -- & -- & -- & hover\_fs:3612 req,3088706 in,1245309 out,\$3.2265 \\
+GPT-4.1-mini & IFBench & 0tv7woty & dynamic\_fewshot\_gpt41mini\_20iter\_3shot & A\_clean\_time\_model & ifbench-fewshot & 0 & 0 & 1807 & 1.04 & 0.73 & \$1.58 & -- & -- & -- & ifbench-fewshot:1807 req,1044760 in,725433 out,\$1.5778 \\
+GPT-4.1-mini & IFBench & w5dkndzl & dynamic\_fewshot\_gpt41mini\_20iter\_3shot & B\_same\_task\_key\_mix & ifbench-fewshot & 0 & 0 & 4748 & 3.16 & 3.01 & \$6.08 & -- & -- & -- & ifbench-fewshot:4160 req,2947562 in,2759197 out,\$5.5921; ifbench-base-feshot:... \\
+GPT-4.1-mini & IFBench & oz2skszd & dynamic\_fewshot\_gpt41mini\_20iter\_3shot & C\_cross\_task\_key\_mix & ifbench-fewshot & 0 & 0 & 3002 & 1.66 & 0.96 & \$2.21 & -- & -- & -- & ifbench-fewshot:1803 req,855671 in,730663 out,\$1.5106; hover\_fs\_base:1199 req... \\
+GPT-4.1-mini & LiveBench-Math & fm6705r5 & dynamic\_fewshot\_20iter\_3shot & C\_overlap\_same\_model\_fspo & gepa & 1 & 0 & 569 & 0.61 & 0.82 & \$1.56 & -- & -- & -- & gepa:309 req,273809 in,429815 out,\$0.7971; LiveBenchMathBench-rp:260 req,3377... \\
+GPT-4.1-mini & LiveBench-Math & kcqy5zvi & dynamic\_fewshot\_20iter\_3shot & C\_overlap\_same\_model\_fspo & gepa & 1 & 0 & 530 & 0.57 & 0.76 & \$1.45 & -- & -- & -- & gepa:277 req,248289 in,385411 out,\$0.7159; LiveBenchMathBench-rp:253 req,3205... \\
+GPT-4.1-mini & LiveBench-Math & h6lucked & dynamic\_fewshot\_20iter\_3shot & C\_overlap\_same\_model\_non\_fspo & AIME4.1-loc & 0 & 2 & 2589 & 2.04 & 7.56 & \$12.90 & -- & -- & -- & AIME4.1-loc:1624 req,1328914 in,3477820 out,\$6.0916; AIME\_MATH\_GPT41MINI:965 ... \\
+GPT-4.1-mini & PUPA & p16uyuga & pupa\_gpt\_nobase\_subset45\_20iter & A\_wandb\_direct & project & 0 & 0 & 7404 & 8.02 & 2.61 & \$7.17 & 6.33 & 2.02 & \$5.76 & project:4108 req,3616750 in,1926792 out,\$4.4944; AIME\_MATH\_AGNOSTIC\_NB:3276 r... \\
+Qwen3-8B & AIME-2025 & wmst5cop & dynamic\_fewshot\_20iter\_3shot & A\_clean\_time\_model & gepa & 0 & 0 & 396 & 0.34 & 0.61 & \$0.31 & -- & -- & -- & gepa:396 req,336497 in,613121 out,\$0.3146 \\
+Qwen3-8B & AIME-2025 & 86zmx5b0 & dspy\_qwen3-8b\_math-specific\_fixed15val\_nothink\_20iter\_3shot\_top1 & C\_overlap\_same\_model\_fspo & gepa & 1 & 0 & 32032 & 37.87 & 96.87 & \$48.49 & -- & -- & -- & gepa:13827 req,15560218 in,28882115 out,\$14.9550; AIME\_MATH\_FEWSHOT:8575 req,... \\
+Qwen3-8B & AIME-2025 & 8v2qjgrx & dspy\_qwen3-8b\_math-specific\_fixed45val\_20iter\_3shot & C\_overlap\_same\_model\_fspo & AIME\_MATH\_FEWSHOT & 1 & 1 & 6322 & 3.33 & 94.93 & \$43.58 & -- & -- & -- & AIME\_MATH\_FEWSHOT:4330 req,2151061 in,89668933 out,\$41.0489; hover\_fs\_base:11... \\
+Qwen3-8B & AIME-2025 & bkpxngx5 & dspy\_qwen3-8b\_math-specific\_fixed15val\_20iter\_3shot & C\_overlap\_same\_model\_fspo & AIME\_MATH\_FEWSHOT & 1 & 1 & 5560 & 2.99 & 81.97 & \$37.64 & -- & -- & -- & AIME\_MATH\_FEWSHOT:3825 req,1924548 in,78094416 out,\$35.7562; hover\_fs\_base:11... \\
+Qwen3-8B & AIME-2025 & vwwcv2b0 & dynamic\_fewshot\_20iter\_3shot & C\_overlap\_same\_model\_fspo & ifbench-fewshot & 2 & 6 & 15579 & 10.54 & 202.04 & \$93.15 & -- & -- & -- & ifbench-fewshot:4187 req,3394124 in,11787417 out,\$5.7583; AIME4.1-loc:2329 re... \\
+Qwen3-8B & HotpotQA & trvbqp3c & hotpot\_qwen\_subset50\_20iter & C\_cross\_task\_key\_mix & project & 0 & 0 & 7202 & 6.40 & 19.26 & \$9.51 & -- & -- & -- & project:5293 req,4058464 in,3881131 out,\$2.2381; LiveBenchMathBench-rp:1391 r... \\
+Qwen3-8B & Hover & aa8u5puv & dynamic\_fewshot\_qwen3\_8b\_20iter\_3shot & C\_overlap\_same\_model\_fspo & hover\_fs & 1 & 0 & 3796 & 2.95 & 3.39 & \$1.88 & -- & -- & -- & hover\_fs:3437 req,2791961 in,2884819 out,\$1.6375; ifbench-fewshot:359 req,162... \\
+Qwen3-8B & IFBench & 8z2rfgr7 & dynamic\_fewshot\_qwen3\_8b\_20iter\_3shot & C\_overlap\_same\_model\_fspo & ifbench-fewshot & 1 & 0 & 3297 & 2.00 & 6.10 & \$3.01 & -- & -- & -- & ifbench-fewshot:2321 req,1593369 in,4276990 out,\$2.1313; ifbench-base-feshot:... \\
+Qwen3-8B & IFBench & 9ogkl1i5 & dynamic\_fewshot\_qwen3\_8b\_20iter\_3shot & C\_overlap\_same\_model\_fspo & ifbench-fewshot & 1 & 0 & 5046 & 3.74 & 18.15 & \$8.69 & -- & -- & -- & ifbench-fewshot:4187 req,3394124 in,11787417 out,\$5.7583; ifbench-base-feshot... \\
+Qwen3-8B & IFBench & bfmewlrg & dynamic\_fewshot\_qwen3\_8b\_20iter\_3shot & C\_overlap\_same\_model\_fspo & hover\_fs & 1 & 0 & 6316 & 4.46 & 6.36 & \$3.41 & -- & -- & -- & hover\_fs:3437 req,2791961 in,2884819 out,\$1.6375; ifbench-fewshot:1687 req,81... \\
+Qwen3-8B & IFBench & r9104ny9 & dynamic\_fewshot\_qwen3\_8b\_20iter\_3shot & C\_overlap\_same\_model\_fspo & ifbench-fewshot & 1 & 0 & 4203 & 2.61 & 7.94 & \$3.92 & -- & -- & -- & ifbench-fewshot:3331 req,2264050 in,6360765 out,\$3.1574; ifbench-base-feshot:... \\
+Qwen3-8B & LiveBench-Math & b6iz2dax & dynamic\_fewshot\_20iter\_3shot & A\_clean\_time\_model & gepa & 0 & 0 & 1450 & 1.11 & 10.11 & \$4.73 & -- & -- & -- & gepa:1450 req,1111392 in,10109574 out,\$4.7292 \\
+Qwen3-8B & LiveBench-Math & gs527dox & dynamic\_fewshot\_20iter\_3shot & A\_clean\_time\_model & gepa & 0 & 0 & 741 & 0.62 & 0.71 & \$0.40 & -- & -- & -- & gepa:741 req,624768 in,714572 out,\$0.3978 \\
+Qwen3-8B & LiveBench-Math & prmdtdw1 & dynamic\_fewshot\_2iter\_3shot & A\_clean\_time\_model & gepa & 0 & 0 & 136 & 0.10 & 0.16 & \$0.08 & -- & -- & -- & gepa:136 req,104532 in,158592 out,\$0.0843 \\
+Qwen3-8B & LiveBench-Math & 1fm6356x & ablation\_nofewshot\_20iter & C\_overlap\_same\_model\_fspo & gepa & 1 & 0 & 1419 & 1.57 & 1.80 & \$1.00 & -- & -- & -- & gepa:1417 req,1567240 in,1796724 out,\$1.0002; AIME\_MATH\_FEWSHOT:2 req,306 in,... \\
+Qwen3-8B & LiveBench-Math & 4436w5h5 & dynamic\_fewshot\_20iter\_3shot & C\_overlap\_same\_model\_fspo & gepa & 1 & 0 & 2254 & 1.98 & 3.08 & \$1.63 & -- & -- & -- & gepa:2230 req,1967647 in,2443596 out,\$1.3410; AIME\_MATH\_FEWSHOT:22 req,9042 i... \\
+Qwen3-8B & LiveBench-Math & 7jl5dta0 & dynamic\_fewshot\_20iter\_3shot & C\_overlap\_same\_model\_fspo & AIME4.1-loc & 1 & 2 & 2797 & 2.03 & 36.04 & \$16.63 & -- & -- & -- & AIME4.1-loc:1805 req,1414952 in,16918309 out,\$7.8625; AIME\_MATH\_AGNOSTIC:373 ... \\
+Qwen3-8B & LiveBench-Math & f8p7kmt5 & ablation\_nofewshot\_20iter & C\_overlap\_same\_model\_fspo & gepa & 1 & 0 & 1264 & 1.64 & 1.55 & \$0.90 & -- & -- & -- & gepa:1264 req,1637688 in,1551127 out,\$0.8967 \\
+Qwen3-8B & LiveBench-Math & qy66amuq & dynamic\_fewshot\_20iter\_3shot & C\_overlap\_same\_model\_fspo & gepa & 1 & 0 & 1684 & 2.13 & 2.25 & \$1.27 & -- & -- & -- & gepa:1682 req,2129161 in,2254376 out,\$1.2740; AIME\_MATH\_FEWSHOT:2 req,306 in,... \\
+Qwen3-8B & LiveBench-Math & xji9z2aa & dynamic\_fewshot\_20iter\_3shot & C\_overlap\_same\_model\_fspo & gepa & 1 & 0 & 1683 & 2.14 & 2.28 & \$1.29 & -- & -- & -- & gepa:1683 req,2138436 in,2280404 out,\$1.2869 \\
+Qwen3-8B & PUPA & 3y0tizlv & pupa\_qwen\_nobase\_dual\_20iter & C\_overlap\_same\_model\_fspo & AIME\_MATH\_AGNOSTIC\_NB & 2 & 0 & 26343 & 41.84 & 37.28 & \$21.85 & -- & -- & -- & AIME\_MATH\_AGNOSTIC\_NB:12424 req,18218334 in,10109592 out,\$6.7252; project:788... \\
+Qwen3-8B & PUPA & n7o1crf6 & pupa\_qwen\_nobase\_subset45\_20iter & C\_overlap\_same\_model\_fspo & AIME\_MATH\_AGNOSTIC\_NB & 2 & 0 & 23113 & 37.72 & 33.06 & \$19.44 & -- & -- & -- & AIME\_MATH\_AGNOSTIC\_NB:10870 req,16344308 in,9023465 out,\$6.0125; project:7280... \\
+Qwen3-8B & PUPA & tituojj7 & pupa\_qwen\_nobase\_subset45\_20iter & C\_overlap\_same\_model\_fspo & AIME\_MATH\_AGNOSTIC\_NB & 2 & 0 & 23546 & 37.73 & 33.14 & \$19.48 & -- & -- & -- & AIME\_MATH\_AGNOSTIC\_NB:11135 req,16494742 in,9183123 out,\$6.1026; project:7291... \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+\end{landscape}

@@ -1,0 +1,22 @@
+{
+  "prompt": "You are a knowledgeable math problem-solving assistant specialized in LiveBench-Math tasks. For each given problem, follow these instructions carefully:\n\n1. **Step-by-step Reasoning:** Before giving the final answer, think through the problem step-by-step aloud. Provide clear, logical explanations and intermediate steps that demonstrate how you arrive at the solution.\n\n2. **Final Answer Formatting:**\n   - For **AMPS_Hard** tasks: The final answer must be a LaTeX expression placed strictly inside \\boxed{...}. For example, \\boxed{\\frac{n+1}{2}^2}.\n   - For **math_comp** tasks: The final answer must be an integer between 0 and 999, enclosed inside \\boxed{...}. For example, \\boxed{123}.\n   - For **olympiad** tasks: The final answer must be a comma-separated list of integers corresponding to expression indices, strictly enclosed in \\boxed{...}. For example, \\boxed{3,5,1,2,4,7,6}.\n\n3. **Following Patterns from Examples:**  \n   - If the problem involves matching formulae (as in olympiad tasks), explicitly justify your choices step-by-step.  \n   - For multiple-choice styled questions (math_comp), provide reasoning and select the best answer, then output only the integer final answer as specified.  \n   - For complicated proofs or derivations (AMPS_Hard), write detailed reasoning and conclude with the boxed LaTeX formula.\n\n4. **If Unsure, Make the Best Possible Guess:** Clearly state your uncertainty and justify your choice as best as you can.\n\nAlways conclude by outputting the final answer exactly in the correct \\boxed{...} format and nothing else outside it.\n\nBegin by carefully reading the problem, then produce your reasoning and final boxed answer accordingly.",
+  "timestamp": "2026-04-27T16:33:47.086086",
+  "dataset_size": 126,
+  "model_config": {
+    "model": "openrouter/openai/gpt-4.1-mini",
+    "temperature": 1,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_tokens": 16384,
+    "num_retries": null
+  },
+  "examples": [],
+  "lm_statistics": {
+    "total_cost": 0.3703255999999999,
+    "total_input_tokens": 128302,
+    "total_output_tokens": 199378,
+    "num_calls": 150
+  },
+  "overall_score": 0.0,
+  "num_correct": 0
+}

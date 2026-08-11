@@ -1,0 +1,38 @@
+\begin{table}[htbp]
+\centering
+\caption{Detailed Ablation Results on II (Instruction Induction, 24 subsets) on Gemma1.1-7B. StablePrompt-RAE@30ep is reported as mean$\pm$std across 3 seeds (s6/s3/s42, 3{,}840 rollouts each). StablePrompt-RAE@100ep and @200ep are single-seed (s6) runs at 12{,}800 and 25{,}600 rollouts respectively, included to show that increasing inference-only epochs largely closes the gap to PPO. GFLOWPO is reported as mean$\pm$std. Scores are in \%.}
+\label{tab:app_ii_full}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}llcccccc@{}}
+\toprule
+\textbf{Subset} & \textbf{Metric} & \textbf{StablePrompt-PPO} & \textbf{RAE@30ep (3 seeds)} & \textbf{RAE@100ep (s6)} & \textbf{RAE@200ep (s6)} & \textbf{GFLOWPO} \\ \midrule
+Antonyms & EM & 77.0 & 71.3$\pm$2.1 & 68.0 & 72.0 & 74.3$\pm$2.3 \\
+Word in Context & EM & 52.0 & 55.3$\pm$7.1 & 50.0 & 50.0 & 61.0$\pm$4.3 \\
+Rhymes & EM & 8.0 & 5.3$\pm$4.0 & 3.0 & 0.0 & 8.7$\pm$2.1 \\
+Num to Verbal & EM & 64.0 & 56.0$\pm$1.0 & 77.0 & 79.0 & 97.7$\pm$1.5 \\
+Cause and Effect & EM & 60.0 & 50.7$\pm$10.1 & 60.0 & 60.0 & 81.3$\pm$11.5 \\
+Larger Animal & EM & 80.0 & 71.7$\pm$15.5 & 79.0 & 86.0 & 92.7$\pm$0.6 \\
+Second Word Letter & EM & 16.0 & 14.0$\pm$0.0 & 14.0 & 14.0 & 27.3$\pm$3.5 \\
+Taxonomy Animal & Exact Set & 79.0 & 46.3$\pm$8.1 & 79.0 & 79.0 & 93.7$\pm$8.4 \\
+Negation & EM & 73.0 & 76.7$\pm$4.0 & 76.0 & 81.0 & 87.0$\pm$0.0 \\
+Common Concept & F1 & 16.9 & 16.9$\pm$0.0 & 16.9 & 16.9 & 13.7$\pm$3.2 \\
+Diff & EM & 2.0 & 2.0$\pm$0.0 & 2.0 & 2.0 & 100.0$\pm$0.0 \\
+Translation en-es & EM & 44.0 & 29.3$\pm$5.7 & 29.0 & 36.0 & 40.3$\pm$3.8 \\
+Orthography Starts With & Exact Set & 9.0 & 14.3$\pm$1.2 & 30.0 & 24.0 & 15.0$\pm$1.0 \\
+Sentiment & EM & 84.0 & 87.3$\pm$1.2 & 87.0 & 87.0 & 91.7$\pm$2.1 \\
+Informal to Formal & F1 & 38.4 & 62.1$\pm$32.9 & 45.3 & 44.8 & 47.3$\pm$2.1 \\
+Sum & EM & 2.0 & 7.7$\pm$9.0 & 2.0 & 2.0 & 100.0$\pm$0.0 \\
+Singular to Plural & EM & 96.0 & 93.7$\pm$4.2 & 94.0 & 93.0 & 98.3$\pm$1.5 \\
+Active to Passive & EM & 99.0 & 76.5$\pm$39.9 & 98.0 & 99.0 & 99.0$\pm$0.0 \\
+Translation en-de & EM & 29.0 & 16.3$\pm$12.9 & 26.0 & 25.0 & 32.0$\pm$2.6 \\
+Sentence Similarity & EM & 30.0 & 25.3$\pm$2.1 & 27.0 & 24.0 & 38.7$\pm$2.5 \\
+Translation en-fr & EM & 28.0 & 29.7$\pm$4.0 & 23.0 & 26.0 & 40.3$\pm$1.5 \\
+Letters List & EM & 69.0 & 54.7$\pm$7.1 & 70.0 & 73.0 & 95.3$\pm$2.1 \\
+First Word Letter & EM & 97.0 & 89.7$\pm$3.1 & 97.0 & 93.0 & 99.0$\pm$1.0 \\
+Synonyms & Contains & 16.0 & 10.7$\pm$1.5 & 14.0 & 12.0 & 24.7$\pm$5.1 \\
+\midrule
+\textbf{Average} & -- & \textbf{48.7} & \textbf{44.3} & \textbf{48.6} & \textbf{49.1} & \textbf{65.0} \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

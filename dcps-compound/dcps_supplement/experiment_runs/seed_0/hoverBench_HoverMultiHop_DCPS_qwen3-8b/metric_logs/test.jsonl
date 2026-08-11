@@ -1,0 +1,1 @@
+{"summary": true, "opt": "DCPS", "bench": "hoverBench", "prog": "HoverMultiHop", "model": "qwen3-8b", "test_score_pct": 56.67, "val_best_pct": 60.0, "best_iteration": null, "n_test": 300}

@@ -1,0 +1,79 @@
+{\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{3.6cm}cc@{}}
+\caption{Detailed Ablation Results on MMLU (57 subjects) on Gemma1.1-7B. StablePrompt-RAE is reported as mean$\pm$std across 3 seeds (s1/s2/s3, 30 training epochs). Scores are accuracy in \%. Subjects are grouped by the 4 official MMLU categories.}
+\label{tab:app_mmlu_full} \\
+\toprule
+\textbf{Category} & \textbf{Subject} & \textbf{StablePrompt-PPO} & \textbf{StablePrompt-RAE (3 seeds)} \\ \midrule
+\endfirsthead
+\caption[]{Detailed Ablation Results on MMLU (57 subjects) (Continued)} \\
+\toprule
+\textbf{Category} & \textbf{Subject} & \textbf{StablePrompt-PPO} & \textbf{StablePrompt-RAE (3 seeds)} \\ \midrule
+\endhead
+\bottomrule
+\endfoot
+\endlastfoot
+STEM & Abstract Algebra & 32.00 & 34.00$\pm$1.00 \\
+ & Anatomy & 54.81 & 53.33$\pm$1.96 \\
+ & Astronomy & 64.47 & 57.46$\pm$5.90 \\
+ & College Biology & 64.58 & 62.50$\pm$4.86 \\
+ & College Chemistry & 43.00 & 42.33$\pm$6.51 \\
+ & College Computer Science & 40.00 & 38.67$\pm$2.52 \\
+ & College Mathematics & 34.00 & 34.00$\pm$2.65 \\
+ & College Physics & 36.27 & 32.68$\pm$2.83 \\
+ & Computer Security & 67.00 & 66.33$\pm$3.06 \\
+ & Conceptual Physics & 49.36 & 50.07$\pm$1.49 \\
+ & Electrical Engineering & 53.10 & 51.49$\pm$2.42 \\
+ & Elementary Mathematics & 39.15 & 39.68$\pm$0.96 \\
+ & High School Biology & 71.94 & 72.26$\pm$0.56 \\
+ & High School Chemistry & 49.26 & 48.61$\pm$3.70 \\
+ & High School Computer Science & 55.00 & 55.00$\pm$3.46 \\
+ & High School Mathematics & 34.81 & 32.10$\pm$2.35 \\
+ & High School Physics & 32.45 & 33.11$\pm$1.99 \\
+ & High School Statistics & 45.83 & 41.67$\pm$6.82 \\
+ & Machine Learning & 41.07 & 39.28$\pm$4.09 \\ \midrule
+Social Science & Econometrics & 32.46 & 29.82$\pm$2.32 \\
+ & High School Geography & 73.74 & 65.99$\pm$1.27 \\
+ & High School Gov. \& Politics & 77.72 & 72.36$\pm$7.93 \\
+ & High School Macroeconomics & 58.97 & 56.33$\pm$2.21 \\
+ & High School Microeconomics & 63.03 & 61.90$\pm$5.60 \\
+ & High School Psychology & 75.78 & 72.11$\pm$2.04 \\
+ & Human Sexuality & 64.89 & 61.58$\pm$9.04 \\
+ & Professional Psychology & 54.11 & 53.11$\pm$2.01 \\
+ & Public Relations & 55.67 & 63.64$\pm$2.73 \\
+ & Security Studies & 50.20 & 52.93$\pm$1.43 \\
+ & Sociology & 71.64 & 66.50$\pm$6.32 \\
+ & US Foreign Policy & 73.00 & 72.00$\pm$5.00 \\ \midrule
+Humanities & Formal Logic & 38.10 & 34.39$\pm$1.84 \\
+ & High School European History & 68.48 & 64.85$\pm$1.60 \\
+ & High School US History & 70.59 & 65.20$\pm$3.83 \\
+ & High School World History & 75.00 & 73.56$\pm$1.60 \\
+ & International Law & 71.07 & 65.84$\pm$2.08 \\
+ & Jurisprudence & 56.48 & 56.17$\pm$1.42 \\
+ & Logical Fallacies & 64.42 & 68.10$\pm$3.07 \\
+ & Moral Disputes & 57.23 & 57.61$\pm$2.46 \\
+ & Moral Scenarios & 30.50 & 28.83$\pm$1.79 \\
+ & Philosophy & 57.23 & 57.56$\pm$1.47 \\
+ & Prehistory & 58.95 & 58.75$\pm$2.49 \\
+ & Professional Law & 38.98 & 40.03$\pm$1.15 \\
+ & World Religions & 74.27 & 74.27$\pm$1.55 \\ \midrule
+Others & Business Ethics & 55.00 & 54.00$\pm$1.73 \\
+ & Clinical Knowledge & 62.26 & 56.60$\pm$4.35 \\
+ & College Medicine & 58.96 & 51.45$\pm$3.22 \\
+ & Global Facts & 36.00 & 37.00$\pm$2.00 \\
+ & Human Aging & 58.30 & 55.30$\pm$1.29 \\
+ & Management & 68.93 & 70.23$\pm$3.68 \\
+ & Marketing & 84.19 & 79.49$\pm$2.22 \\
+ & Medical Genetics & 56.00 & 53.67$\pm$0.58 \\
+ & Miscellaneous & 72.80 & 69.13$\pm$5.45 \\
+ & Nutrition & 61.11 & 61.98$\pm$2.86 \\
+ & Professional Accounting & 55.72 & 40.19$\pm$0.89 \\
+ & Professional Medicine & 44.33 & 47.67$\pm$3.42 \\
+ & Virology & 53.61 & 47.99$\pm$0.35 \\ \midrule
+\textbf{STEM Avg} & (19 subj.) & \textbf{47.79} & \textbf{46.56} \\
+\textbf{Social Science Avg} & (12 subj.) & \textbf{62.60} & \textbf{60.69} \\
+\textbf{Humanities Avg} & (13 subj.) & \textbf{58.56} & \textbf{57.32} \\
+\textbf{Others Avg} & (13 subj.) & \textbf{59.02} & \textbf{55.75} \\ \midrule
+\textbf{Total Macro Avg} & (57 subj.) & \textbf{55.93} & \textbf{54.08} \\ \bottomrule
+\end{longtable}
+}
