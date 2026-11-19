@@ -1,5 +1,7 @@
 # Simplicity Goes Far: Auditing Prompt Optimizers with Demonstration-Conditioned Prompt Search
 
+[Paper on arXiv (2611.22605)](https://arxiv.org/abs/2611.22605)
+
 Code, data, and logs for the paper. **DCPS = Demonstration-Conditioned Prompt
 Search** — a deliberately minimal control: propose a prompt conditioned on a fresh
 draw of demonstrations, evaluate it, keep the best. No reflection, no mutation
@@ -263,6 +265,20 @@ python tc.py            # StablePrompt-PPO,  classification
 python tc_gfb.py        # StablePrompt-DCPS, classification
 # PPO:  tc.py, qa.py (via utils.py), origin_ii.py
 # DCPS: tc_gfb.py, qa_gfb.py, ii_gfb.py, bbii_tc_gfb.py, bbii_tg_gfb.py
+```
+
+## Citation
+
+```bibtex
+@misc{chen2026simplicity,
+  title         = {Simplicity Goes Far: Auditing Prompt Optimizers with Demonstration-Conditioned Prompt Search},
+  author        = {Chen, Bohe},
+  year          = {2026},
+  eprint        = {2611.22605},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  url           = {https://arxiv.org/abs/2611.22605}
+}
 ```
 
 ## License and attribution
