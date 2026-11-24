@@ -172,14 +172,14 @@ Some GPT-4.1-mini scripts still pass `top_p=0.95` in AIME variants; this should 
 
 | Experiment | W&B run |
 |---|---|
-| AIME v2 Qwen3-8B | `https://wandb.ai/awesome-prompt/aime-math-litellm-agnostic-nb/runs/5nnpwzju` |
-| AIME v2 GPT-4.1-mini | `https://wandb.ai/awesome-prompt/aime-math-litellm-agnostic-nb/runs/4fx08hfi` |
-| LiveBench Qwen3-8B | `https://wandb.ai/awesome-prompt/livebench-math-dynamic-fewshot/runs/7jl5dta0` |
-| LiveBench GPT-4.1-mini | `https://wandb.ai/awesome-prompt/livebench-math-dynamic-fewshot/runs/h6lucked` |
-| IFBench Qwen3-8B dynamic | pending artifact-aligned rerun; previous pre-alignment run was `https://wandb.ai/awesome-prompt/ifbench-dynamic-fewshot/runs/9ogkl1i5` |
-| IFBench GPT-4.1-mini dynamic | pending artifact-aligned rerun; previous pre-alignment run was `https://wandb.ai/awesome-prompt/ifbench-dynamic-fewshot/runs/w5dkndzl` |
-| IFBench Qwen3-8B original baseline | pending artifact-aligned rerun; previous pre-alignment run was `https://wandb.ai/awesome-prompt/ifbench-baseline-test/runs/lxer1u42` |
-| IFBench GPT-4.1-mini original baseline | pending artifact-aligned rerun; previous pre-alignment run was `https://wandb.ai/awesome-prompt/ifbench-baseline-test/runs/vfjynj07` |
+| AIME v2 Qwen3-8B | `https://forge.coreweave.com/wandb/awesome-prompt/aime-math-litellm-agnostic-nb/runs/5nnpwzju` |
+| AIME v2 GPT-4.1-mini | `https://forge.coreweave.com/wandb/awesome-prompt/aime-math-litellm-agnostic-nb/runs/4fx08hfi` |
+| LiveBench Qwen3-8B | `https://forge.coreweave.com/wandb/awesome-prompt/livebench-math-dynamic-fewshot/runs/7jl5dta0` |
+| LiveBench GPT-4.1-mini | `https://forge.coreweave.com/wandb/awesome-prompt/livebench-math-dynamic-fewshot/runs/h6lucked` |
+| IFBench Qwen3-8B dynamic | pending artifact-aligned rerun; previous pre-alignment run was `https://forge.coreweave.com/wandb/awesome-prompt/ifbench-dynamic-fewshot/runs/9ogkl1i5` |
+| IFBench GPT-4.1-mini dynamic | pending artifact-aligned rerun; previous pre-alignment run was `https://forge.coreweave.com/wandb/awesome-prompt/ifbench-dynamic-fewshot/runs/w5dkndzl` |
+| IFBench Qwen3-8B original baseline | pending artifact-aligned rerun; previous pre-alignment run was `https://forge.coreweave.com/wandb/awesome-prompt/ifbench-baseline-test/runs/lxer1u42` |
+| IFBench GPT-4.1-mini original baseline | pending artifact-aligned rerun; previous pre-alignment run was `https://forge.coreweave.com/wandb/awesome-prompt/ifbench-baseline-test/runs/vfjynj07` |
 
 ## Suggested paper wording
 
