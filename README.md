@@ -21,7 +21,7 @@ Two audits, one per family:
 ## Experiment logs are public
 
 Every run behind every number is on Weights & Biases:
-**[https://wandb.ai/awesome-prompt/projects](https://forge.coreweave.com/wandb/awesome-prompt/projects)**
+**[https://forge.coreweave.com/wandb/awesome-prompt/projects](https://forge.coreweave.com/wandb/awesome-prompt/projects)**
 
 Those 39 projects are the raw source. This repo also ships a **frozen snapshot**
 (`results/raw_wandb_data.csv`) so the analysis reproduces with no wandb account and
